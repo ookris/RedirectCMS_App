@@ -1,0 +1,27 @@
+{
+  "name": "Webium",
+  "author": "RedirectCMS",
+  "version": "1.0.0",
+  "description": "Minimalistyczny szablon w stylu Medium.com — żółty nagłówek, płaskie karty, typografia czytelnicza, pionowy sidebar na widoku wpisu. Inspirowany Webium Blogger Theme.",
+  "published_date": "2026-03-29",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "primary",     "label": "Kolor główny (żółty nagłówek strony głównej)", "default": "#ffc017"},
+    {"key": "accent",      "label": "Akcent (linki, hover, aktywne)",               "default": "#1a8917"},
+    {"key": "text",        "label": "Kolor tekstu głównego",                        "default": "#292929"},
+    {"key": "muted",       "label": "Tekst drugorzędny (meta, opis)",               "default": "#757575"},
+    {"key": "border",      "label": "Kolor ramek i separatorów",                    "default": "#e6e6e6"},
+    {"key": "body_bg",     "label": "Tło strony",                                   "default": "#ffffff"},
+    {"key": "chip_bg",     "label": "Tło chipa kategorii/tagu",                     "default": "#f2f2f2"}
+  ],
+
+  "image_sizes": {
+    "listing":       {"width": 200, "height": 134, "crop": true,  "label": "Miniatura listingu (3:2)"},
+    "listing_inner": {"width": 112, "height": 112, "crop": true,  "label": "Miniatura listingu — strony wewnętrzne (1:1)"},
+    "post":          {"width": 800, "height": 450, "crop": true,  "label": "Obraz wpisu"},
+    "gallery":       {"width": 1200,"height": 800, "crop": false, "label": "Galeria — pełny rozmiar"},
+    "gallery_thumb": {"width": 300, "height": 200, "crop": true,  "label": "Miniatura galerii"}
+  }
+}

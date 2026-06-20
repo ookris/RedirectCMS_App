@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSS i sitemap - Dokumentacja RedirectCMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/sandstone/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book me-2" viewBox="0 0 16 16">
+        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+      </svg>
+      Dokumentacja RedirectCMS
+    </a>
+    <a href="../index.php" class="btn btn-light btn-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-1" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg>
+      Powrót do panelu
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block docs-sidebar py-3">
+      <div class="position-sticky" style="top: 70px;">
+
+        <div class="sidebar-heading">Wprowadzenie</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getting-started.html">Pierwsze kroki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Panel</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">Powiadomienia</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Zarządzanie treścią</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="links.html">Linki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="campaigns.html">Kampanie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages.html">Strony</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Kategorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tags.html">Tagi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="affiliate-programs.html">Programy afiliacyjne</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="import-export.html">Import / Export</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Analityka</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="statistics.html">Statystyki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Konfiguracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Ustawienia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appearance.html">Wygląd</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="image-optimizer.html">Optymalizacja obrazów</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backup.html">Backup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="sitemap-rss.html">RSS i sitemap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cron.html">Zadania Cron</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Bezpieczeństwo</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="two-factor-auth.html">2FA</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Administracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="geo-cache.html">Cache Geo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Zasoby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logs.html">Logi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="audit-log.html">Audit Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="broken-links.html">Sprawdzanie linków</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file-manager.html">Menedżer plików</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 docs-content">
+
+      <nav aria-label="breadcrumb" class="docs-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dokumentacja</a></li>
+          <li class="breadcrumb-item active">RSS i sitemap</li>
+        </ol>
+      </nav>
+
+      <h1>RSS i sitemap</h1>
+
+      <p class="lead">
+        RedirectCMS generuje dynamiczny RSS i mapę strony w trybie blog, aby czytniki i wyszukiwarki zawsze widziały najnowsze wpisy.
+      </p>
+
+      <h2>Kiedy dostępne?</h2>
+      <ul>
+        <li>Tylko przy włączonym trybie strony głównej: <strong>Blog</strong>.</li>
+        <li>Uwzględniane są wyłącznie wpisy <strong>published</strong> w oknie publikacji (publish_at &lt;= now, expires_at puste lub w przyszłości).</li>
+        <li>Adresy budowane są z wykrytym <strong>basePath</strong> (działa także w podkatalogu).</li>
+      </ul>
+
+      <h2>Adresy</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Ścieżka</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/rss.xml</code> (alias <code>/feed.xml</code>)</td>
+            <td>RSS 2.0 z najnowszymi wpisami bloga (domyślnie do 50 pozycji, limitowany ustawieniem <em>blog_rss_limit</em>).</td>
+          </tr>
+          <tr>
+            <td><code>/sitemap.xml</code></td>
+            <td>Mapa strony dla Google/Bing: strona główna bloga + wszystkie <code>/blog/slug</code> (do 5000 adresów).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert bg-info-subtle border border-info text-info-emphasis">
+        <strong>Auto-link:</strong> Strona główna i widok wpisu w trybie blog dodają w nagłówku HTTP <code>Link</code> do RSS i sitemap, co ułatwia wykrycie przez roboty.
+      </div>
+
+      <h2>Zawartość RSS</h2>
+      <ul>
+        <li>Tytuł kanału i opis z ustawień: <em>home_title</em> oraz <em>home_description</em>.</li>
+        <li>Elementy sortowane malejąco po <em>publish_at</em>/<em>created_at</em>.</li>
+        <li>Opis skracany do wartości <em>blog_description_length</em>; jeśli brak opisu, dołączany jest URL docelowy.</li>
+        <li>Nagłówki: <code>Content-Type: application/rss+xml; charset=utf-8</code>, <code>Cache-Control: public, max-age=900</code>.</li>
+      </ul>
+
+      <h2>Zawartość sitemap</h2>
+      <ul>
+        <li>Zawiera stronę główną bloga i każdą stronę <code>/blog/slug</code>.</li>
+        <li><em>lastmod</em> ustawione na datę publikacji (lub utworzenia), <em>changefreq</em>: <code>daily</code> dla strony głównej, <code>weekly</code> dla wpisów.</li>
+        <li>Nagłówki: <code>Content-Type: application/xml; charset=utf-8</code>, <code>Cache-Control: public, max-age=900</code>.</li>
+      </ul>
+
+      <h2>Jak dodać do Google Search Console</h2>
+      <ol>
+        <li>W GSC wybierz właściwość domeny.</li>
+        <li>Przejdź do <strong>Mapy witryn</strong> i dodaj ścieżkę: <code>/sitemap.xml</code>.</li>
+        <li>Po dodaniu sprawdź status przetwarzania; w logach błędów znajdziesz ewentualne problemy z URL-ami.</li>
+      </ol>
+
+      <h2>Jak użyć RSS</h2>
+      <ul>
+        <li>Skopiuj adres <code>/rss.xml</code> i wklej do czytnika RSS (np. Feedly, Thunderbird).</li>
+        <li>W dashboardzie lub na stronie bloga czytniki wykryją RSS także przez nagłówek <code>Link</code>.</li>
+      </ul>
+
+      <h2>Debugowanie</h2>
+      <ul>
+        <li>Sprawdź odpowiedź: <code>curl -I https://twoja-domena.pl/rss.xml</code> (HTTP 200, poprawny <em>Content-Type</em>).</li>
+        <li>Zweryfikuj, czy wpisy w RSS pokrywają się z listą publikacji na blogu.</li>
+        <li>Jeśli kanał jest pusty, upewnij się, że tryb strony głównej to <strong>Blog</strong> i że wpisy są opublikowane.</li>
+      </ul>
+
+      <!-- Navigation -->
+      <nav class="docs-nav-footer d-flex justify-content-between">
+        <a href="backup.html" class="btn btn-outline-primary btn-prev">Poprzedni: Backup</a>
+        <a href="cron.html" class="btn btn-outline-primary btn-next">Następny: Zadania Cron</a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

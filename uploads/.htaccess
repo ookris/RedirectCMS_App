@@ -1,0 +1,7 @@
+# Zabezpieczenie przed wykonywaniem skryptów w katalogu uploads
+# Blokuje tylko wykonywanie plików PHP i innych skryptów
+# Obrazki (jpg, png, gif, webp) są dostępne normalnie
+
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phps|pl|py|jsp|asp|sh|cgi|shtml|phar)$">
+    Require all denied
+</FilesMatch>

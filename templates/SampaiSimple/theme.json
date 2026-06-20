@@ -1,0 +1,27 @@
+{
+  "name": "SampaiSimple",
+  "author": "RedirectCMS (inspired by anasrar/SampaiSimple)",
+  "version": "1.0.0",
+  "description": "Prosty i lekki motyw blogowy inspirowany SampaiSimple Blogger Template (Bootstrap 4), z czystym ukladem tresci i czytelna typografia.",
+  "published_date": "2026-04-04",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "primary",     "label": "Kolor glowny",                                  "default": "#007bff"},
+    {"key": "accent",      "label": "Akcent",                                        "default": "#17a2b8"},
+    {"key": "text",        "label": "Kolor tekstu głównego",                        "default": "#292929"},
+    {"key": "muted",       "label": "Tekst drugorzędny (meta, opis)",               "default": "#757575"},
+    {"key": "border",      "label": "Kolor ramek i separatorów",                    "default": "#e6e6e6"},
+    {"key": "body_bg",     "label": "Tlo strony",                                   "default": "#e8e8e8"},
+    {"key": "chip_bg",     "label": "Tło chipa kategorii/tagu",                     "default": "#f2f2f2"}
+  ],
+
+  "image_sizes": {
+    "listing":       {"width": 200, "height": 134, "crop": true,  "label": "Miniatura listingu (3:2)"},
+    "listing_inner": {"width": 112, "height": 112, "crop": true,  "label": "Miniatura listingu — strony wewnętrzne (1:1)"},
+    "post":          {"width": 800, "height": 450, "crop": true,  "label": "Obraz wpisu"},
+    "gallery":       {"width": 1200,"height": 800, "crop": false, "label": "Galeria — pełny rozmiar"},
+    "gallery_thumb": {"width": 300, "height": 200, "crop": true,  "label": "Miniatura galerii"}
+  }
+}

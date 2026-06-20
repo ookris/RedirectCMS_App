@@ -1,0 +1,29 @@
+{
+  "name": "JTemplate",
+  "author": "RedirectCMS (inspired by zaferzent/JTemplate)",
+  "version": "1.0.0",
+  "description": "Nowoczesny magazynowy szablon bloga z kartami z efektem unoszenia, trybem ciemnym/jasnym, paskiem wyszukiwania i responsywnym menu — inspirowany JTemplate Blogger Theme.",
+  "published_date": "2026-04-04",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "accent",      "label": "Akcent (przyciski, linki, hover)",    "default": "#dc5b5d"},
+    {"key": "dark",        "label": "Ciemny kolor (nagłówki, tekst)",       "default": "#2A2F36"},
+    {"key": "muted",       "label": "Tekst drugorzędny",                    "default": "#6C7A89"},
+    {"key": "border",      "label": "Kolor ramek i separatorów",            "default": "#e2e6ea"},
+    {"key": "body_bg",     "label": "Tło strony (jasny motyw)",             "default": "#f2f4f5"},
+    {"key": "card_bg",     "label": "Tło kart (jasny motyw)",               "default": "#ffffff"},
+    {"key": "dark_bg",     "label": "Tło strony (ciemny motyw)",            "default": "#212121"},
+    {"key": "dark_card",   "label": "Tło kart (ciemny motyw)",              "default": "#2d2d2d"},
+    {"key": "dark_header", "label": "Tło nagłówka (ciemny motyw)",          "default": "#1a1a1a"}
+  ],
+
+  "image_sizes": {
+    "featured":      {"width": 1200, "height": 630,  "crop": true,  "label": "Obraz wyróżniający (hero 16:9)"},
+    "listing":       {"width": 680,  "height": 383,  "crop": true,  "label": "Miniatura karty (16:9)"},
+    "post":          {"width": 900,  "height": 506,  "crop": true,  "label": "Obraz wpisu (16:9)"},
+    "gallery":       {"width": 1200, "height": 800,  "crop": false, "label": "Galeria pełny rozmiar"},
+    "gallery_thumb": {"width": 300,  "height": 200,  "crop": true,  "label": "Miniatura galerii"}
+  }
+}

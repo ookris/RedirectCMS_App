@@ -1,0 +1,3 @@
+# Blokuj dostęp do katalogu storage
+# Pliki są dostępne tylko przez panel administracyjny
+Require all denied

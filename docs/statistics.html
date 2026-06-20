@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statystyki - Dokumentacja RedirectCMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/sandstone/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book me-2" viewBox="0 0 16 16">
+        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+      </svg>
+      Dokumentacja RedirectCMS
+    </a>
+    <a href="../index.php" class="btn btn-light btn-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-1" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg>
+      Powrót do panelu
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block docs-sidebar py-3">
+      <div class="position-sticky" style="top: 70px;">
+
+        <div class="sidebar-heading">Wprowadzenie</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getting-started.html">Pierwsze kroki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Panel</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">Powiadomienia</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Zarządzanie treścią</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="links.html">Linki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="campaigns.html">Kampanie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages.html">Strony</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Kategorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tags.html">Tagi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="affiliate-programs.html">Programy afiliacyjne</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="import-export.html">Import / Export</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Analityka</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="statistics.html">Statystyki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Konfiguracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Ustawienia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appearance.html">Wygląd</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="image-optimizer.html">Optymalizacja obrazów</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backup.html">Backup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sitemap-rss.html">RSS i sitemap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cron.html">Zadania Cron</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Bezpieczeństwo</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="two-factor-auth.html">2FA</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Administracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="geo-cache.html">Cache Geo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Zasoby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logs.html">Logi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="audit-log.html">Audit Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="broken-links.html">Sprawdzanie linków</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file-manager.html">Menedżer plików</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 docs-content">
+
+      <nav aria-label="breadcrumb" class="docs-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dokumentacja</a></li>
+          <li class="breadcrumb-item active">Statystyki</li>
+        </ol>
+      </nav>
+
+      <h1>Statystyki</h1>
+
+      <p class="lead">
+        RedirectCMS oferuje szczegółową analitykę kliknięć, pozwalającą śledzić efektywność linków i zachowania użytkowników.
+      </p>
+
+      <h2>Statystyki globalne</h2>
+
+      <p>Strona "Statystyki" w menu głównym wyświetla dane dla wszystkich linków.</p>
+
+      <h3>Podsumowanie</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Metryka</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Kliknięcia dzisiaj</strong></td>
+            <td>Suma kliknięć zarejestrowanych dzisiaj</td>
+          </tr>
+          <tr>
+            <td><strong>Kliknięcia 7 dni</strong></td>
+            <td>Suma kliknięć z ostatnich 7 dni</td>
+          </tr>
+          <tr>
+            <td><strong>Kliknięcia 30 dni</strong></td>
+            <td>Suma kliknięć z ostatnich 30 dni</td>
+          </tr>
+          <tr>
+            <td><strong>Kliknięcia 90 dni</strong></td>
+            <td>Suma kliknięć z ostatnich 90 dni</td>
+          </tr>
+          <tr>
+            <td><strong>Unikalni użytkownicy</strong></td>
+            <td>Liczba unikalnych adresów IP</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Wykres trendów</h3>
+      <p>Interaktywny wykres pokazujący dzienną liczbę kliknięć. Możesz wybrać zakres:</p>
+      <ul>
+        <li>7 dni</li>
+        <li>30 dni</li>
+        <li>90 dni</li>
+      </ul>
+
+      <h3>Filtrowanie botów</h3>
+      <p>Opcja "Wyklucz boty" pozwala odfiltrować ruch generowany przez boty i crawlery.</p>
+
+      <h3>Cache statystyk</h3>
+      <p>Statystyki globalne są cache'owane dla lepszej wydajności. Wyświetlany jest czas ostatniej aktualizacji. Przycisk "Odśwież" pozwala wymusić przeliczenie.</p>
+
+      <h2>Statystyki pojedynczego linku</h2>
+
+      <p>Aby zobaczyć statystyki konkretnego linku, kliknij ikonę wykresu przy linku na liście.</p>
+
+      <h3>Podsumowanie linku</h3>
+      <ul>
+        <li><strong>Kliknięcia dzisiaj</strong> - z porównaniem do dnia poprzedniego</li>
+        <li><strong>Kliknięcia 7 dni</strong> - suma tygodniowa</li>
+        <li><strong>Wszystkie kliknięcia</strong> - suma od utworzenia linku</li>
+      </ul>
+
+      <h3>Wykres dzienny</h3>
+      <p>Wykres słupkowy pokazujący kliknięcia dzień po dniu dla wybranego zakresu.</p>
+
+      <h3>Godziny szczytowe</h3>
+      <p>Wykres pokazujący rozkład kliknięć według godzin dnia (0-23). Pomaga zidentyfikować najlepsze pory na publikacje.</p>
+
+      <h3>Źródła (Referers)</h3>
+      <p>Lista stron, z których użytkownicy klikali w link:</p>
+      <ul>
+        <li>Nazwa domeny źródłowej</li>
+        <li>Liczba kliknięć</li>
+        <li>Procent udziału</li>
+      </ul>
+
+      <h3>Przeglądarki</h3>
+      <p>Rozkład kliknięć według przeglądarek:</p>
+      <ul>
+        <li>Chrome, Firefox, Safari, Edge, inne</li>
+        <li>Wykres kołowy z procentami</li>
+      </ul>
+
+      <h3>Urządzenia</h3>
+      <p>Rozkład według typu urządzenia:</p>
+      <ul>
+        <li>Desktop</li>
+        <li>Mobile</li>
+        <li>Tablet</li>
+      </ul>
+
+      <h3>Systemy operacyjne</h3>
+      <p>Rozkład według systemów operacyjnych:</p>
+      <ul>
+        <li>Windows, macOS, Linux</li>
+        <li>Android, iOS</li>
+        <li>Inne</li>
+      </ul>
+
+      <h3>Geolokalizacja</h3>
+      <p>Kliknięcia według krajów:</p>
+      <ul>
+        <li>Nazwa kraju z flagą</li>
+        <li>Liczba kliknięć</li>
+        <li>Procent udziału</li>
+      </ul>
+
+      <div class="alert bg-info-subtle border border-info text-info-emphasis">
+        <strong>Prywatność:</strong> Adresy IP są anonimizowane. System przechowuje tylko informacje o kraju/regionie, nie dokładną lokalizację.
+      </div>
+
+      <h2>Eksport statystyk</h2>
+
+      <p>Na stronie statystyk pojedynczego linku możesz eksportować dane.</p>
+
+      <h3>Format CSV</h3>
+      <p>Dostępne zestawy danych:</p>
+      <ul>
+        <li><strong>Dane dzienne</strong> - data, kliknięcia</li>
+        <li><strong>Źródła</strong> - referer, liczba</li>
+        <li><strong>Urządzenia</strong> - typ, liczba</li>
+        <li><strong>Przeglądarki</strong> - nazwa, liczba</li>
+        <li><strong>Godziny</strong> - godzina, liczba</li>
+      </ul>
+
+      <h3>Format JSON</h3>
+      <p>Wszystkie dane w jednym pliku JSON - przydatne do integracji z innymi narzędziami.</p>
+
+      <h2>Wykrywanie anomalii</h2>
+
+      <p>System automatycznie wykrywa nietypowe wzorce ruchu:</p>
+      <ul>
+        <li><strong>Nagły wzrost</strong> - znacząco więcej kliknięć niż zwykle</li>
+        <li><strong>Nagły spadek</strong> - znacząco mniej kliknięć niż zwykle</li>
+      </ul>
+
+      <p>Alerty wyświetlane są na <a href="dashboard.html">Dashboardzie</a>.</p>
+
+      <h2>Dobre praktyki</h2>
+
+      <ul class="feature-list">
+        <li>Regularnie przeglądaj statystyki, aby zrozumieć zachowania użytkowników</li>
+        <li>Porównuj dane między okresami (tydzień do tygodnia)</li>
+        <li>Analizuj źródła ruchu, aby optymalizować promocje</li>
+        <li>Eksportuj dane do zewnętrznych narzędzi analitycznych</li>
+      </ul>
+
+      <!-- Navigation -->
+      <nav class="docs-nav-footer d-flex justify-content-between">
+        <a href="import-export.html" class="btn btn-outline-primary btn-prev">Poprzedni: Import / Export</a>
+        <a href="settings.html" class="btn btn-outline-primary btn-next">Następny: Ustawienia</a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+.post-reactions {
+  margin: 1.75rem 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(0,0,0,.03);
+  border-radius: .75rem;
+  border: 1px solid rgba(0,0,0,.07);
+  text-align: center;
+}
+.post-reactions__label {
+  margin: 0 0 .9rem;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: #6c757d;
+}
+.post-reactions__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+}
+.post-reactions__feedback {
+  text-align: center;
+}
+.post-reactions__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .2rem;
+  padding: .45rem .7rem;
+  border: 2px solid transparent;
+  border-radius: .65rem;
+  background: transparent;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+  line-height: 1;
+  min-width: 60px;
+}
+.post-reactions__btn:hover {
+  background: rgba(0,0,0,.06);
+  transform: translateY(-3px) scale(1.08);
+}
+.post-reactions__btn--active {
+  background: rgba(253, 202, 71, .18);
+  border-color: #FDCA47;
+}
+.post-reactions__btn--active .post-reactions__icon svg {
+  filter: drop-shadow(0 2px 5px rgba(253,202,71,.6));
+}
+.post-reactions__icon { display: block; }
+.post-reactions__icon svg { display: block; }
+.post-reactions__count {
+  font-size: .8rem;
+  font-weight: 700;
+  color: #495057;
+  min-width: 1.2em;
+  text-align: center;
+}
+.post-reactions__name {
+  font-size: .65rem;
+  color: #868e96;
+  white-space: nowrap;
+}
+.post-reactions__feedback {
+  margin: .6rem 0 0;
+  font-size: .78rem;
+  color: #6c757d;
+  min-height: 1.2em;
+}
+@media (max-width: 480px) {
+  .post-reactions__btn { min-width: 48px; padding: .35rem .5rem; }
+  .post-reactions__name { display: none; }
+}

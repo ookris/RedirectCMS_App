@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ustawienia - Dokumentacja RedirectCMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/sandstone/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book me-2" viewBox="0 0 16 16">
+        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+      </svg>
+      Dokumentacja RedirectCMS
+    </a>
+    <a href="../index.php" class="btn btn-light btn-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-1" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg>
+      Powrót do panelu
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block docs-sidebar py-3">
+      <div class="position-sticky" style="top: 70px;">
+
+        <div class="sidebar-heading">Wprowadzenie</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getting-started.html">Pierwsze kroki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Panel</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">Powiadomienia</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Zarządzanie treścią</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="links.html">Linki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="campaigns.html">Kampanie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages.html">Strony</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Kategorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tags.html">Tagi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="affiliate-programs.html">Programy afiliacyjne</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="import-export.html">Import / Export</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Analityka</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="statistics.html">Statystyki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Konfiguracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="settings.html">Ustawienia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appearance.html">Wygląd</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="image-optimizer.html">Optymalizacja obrazów</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backup.html">Backup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sitemap-rss.html">RSS i sitemap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cron.html">Zadania Cron</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Bezpieczeństwo</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="two-factor-auth.html">2FA</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Administracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="geo-cache.html">Cache Geo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Zasoby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logs.html">Logi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="audit-log.html">Audit Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="broken-links.html">Sprawdzanie linków</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file-manager.html">Menedżer plików</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 docs-content">
+
+      <nav aria-label="breadcrumb" class="docs-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dokumentacja</a></li>
+          <li class="breadcrumb-item active">Ustawienia</li>
+        </ol>
+      </nav>
+
+      <h1>Ustawienia</h1>
+
+      <p class="lead">
+        Strona ustawień pozwala skonfigurować wszystkie aspekty działania RedirectCMS. Ustawienia podzielone są na zakładki tematyczne.
+      </p>
+
+      <h2 id="ogolne">Zakładka: Ogólne</h2>
+
+      <p>Podstawowe ustawienia systemu.</p>
+
+      <h3>Opóźnienie przekierowania</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Domyślne opóźnienie</strong></td>
+            <td>Czas w sekundach przed automatycznym przekierowaniem. Wartość 0 oznacza natychmiastowe przekierowanie (301/302). Można nadpisać dla pojedynczego linku.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Generowanie slugów</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Zakres</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Długość slugu</strong></td>
+            <td>4-64 znaki</td>
+            <td>Liczba znaków dla automatycznie generowanych slugów. Krótsze są łatwiejsze do zapamiętania, dłuższe - bardziej unikalne.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Strefa czasowa</h3>
+      <p>Wybierz strefę czasową dla systemu. Wpływa na wyświetlanie dat i godzin oraz harmonogramy publikacji.</p>
+
+      <h3>Ustawienia kosza</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tryb</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Usuń automatycznie</strong></td>
+            <td>Linki w koszu są automatycznie usuwane po określonym czasie (1-365 dni)</td>
+          </tr>
+          <tr>
+            <td><strong>Nie usuwaj automatycznie</strong></td>
+            <td>Linki pozostają w koszu do ręcznego usunięcia</td>
+          </tr>
+          <tr>
+            <td><strong>Nie przenieś do kosza</strong></td>
+            <td>Usunięcie linku jest natychmiastowe i trwałe (bez kosza)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Limity miejsca na dysku</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Limit</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pliki</strong></td>
+            <td>Maksymalna wielkość katalogu /uploads (w MB lub GB). Zostaw puste dla braku limitu.</td>
+          </tr>
+          <tr>
+            <td><strong>Baza danych</strong></td>
+            <td>Maksymalna wielkość bazy danych (w MB lub GB). Zostaw puste dla braku limitu.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="pola-linkow">Zakładka: Pola linków</h2>
+
+      <p>Definiowanie niestandardowych pól dla formularza linku.</p>
+
+      <h3>Czym są pola niestandardowe?</h3>
+      <p>Pozwalają dodać własne informacje do każdego linku, np.:</p>
+      <ul>
+        <li>Średnia ocena produktu</li>
+        <li>Cena</li>
+        <li>Kod rabatowy</li>
+        <li>Data promocji</li>
+      </ul>
+
+      <h3>Tworzenie pola</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Etykieta</strong></td>
+            <td>Nazwa wyświetlana w formularzu (np. "Średnia ocena")</td>
+          </tr>
+          <tr>
+            <td><strong>Klucz</strong></td>
+            <td>Identyfikator techniczny (np. "avg_rating"). Bez spacji, małe litery.</td>
+          </tr>
+          <tr>
+            <td><strong>Typ</strong></td>
+            <td>Tekst lub Liczba</td>
+          </tr>
+          <tr>
+            <td><strong>Placeholder</strong></td>
+            <td>Tekst podpowiedzi w polu</td>
+          </tr>
+          <tr>
+            <td><strong>Krok</strong></td>
+            <td>Dla pól numerycznych - dokładność (np. 0.1 dla ocen, 1 dla liczb całkowitych)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Użycie pól niestandardowych</h3>
+      <p>Pola są dostępne:</p>
+      <ul>
+        <li>W formularzu dodawania/edycji linku</li>
+        <li>W szablonach trybu blog</li>
+        <li>W eksportowanych danych CSV/JSON</li>
+      </ul>
+
+      <h2 id="strona-glowna">Zakładka: Strona główna</h2>
+
+      <p>Konfiguracja strony głównej systemu (root URL).</p>
+
+      <h3>Tryb strony głównej</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tryb</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Landing page</strong></td>
+            <td>Standardowa strona informacyjna z tytułem, opisem i linkiem do panelu</td>
+          </tr>
+          <tr>
+            <td><strong>Przekierowanie</strong></td>
+            <td>Automatyczne przekierowanie na podany URL (np. Twoja główna strona)</td>
+          </tr>
+          <tr>
+            <td><strong>Blog</strong></td>
+            <td>Lista linków w formie bloga z miniaturkami i opisami</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Fallback URL</h3>
+      <p>Adres URL używany gdy link jest niedostępny (nieaktywny, wygasł lub jest w koszu). Zamiast wyświetlać błąd 404, użytkownik zostaje przekierowany na ten adres. Zostaw puste, aby wyświetlać standardowy błąd.</p>
+
+      <h3>Branding</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tytuł</strong></td>
+            <td>Tytuł strony głównej (wyświetlany w zakładce przeglądarki)</td>
+          </tr>
+          <tr>
+            <td><strong>Podtytuł</strong></td>
+            <td>Tekst pod tytułem na landing page</td>
+          </tr>
+          <tr>
+            <td><strong>Meta Description</strong></td>
+            <td>Opis dla wyszukiwarek (max 160 znaków)</td>
+          </tr>
+          <tr>
+            <td><strong>Logo</strong></td>
+            <td>Obrazek logo (JPG/PNG, min. 80x80px)</td>
+          </tr>
+          <tr>
+            <td><strong>Favicon</strong></td>
+            <td>Ikona strony (JPG/PNG, 32x32 lub 64x64px)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Ustawienia trybu Blog</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Długość opisu</strong></td>
+            <td>Maksymalna liczba znaków opisu (50-1000)</td>
+          </tr>
+          <tr>
+            <td><strong>Wpisy na stronę</strong></td>
+            <td>Liczba linków na stronie (1-50)</td>
+          </tr>
+          <tr>
+            <td><strong>Wyświetlaj miniaturki</strong></td>
+            <td>Pokazuj obrazki OG przy wpisach</td>
+          </tr>
+          <tr>
+            <td><strong>Szablon</strong></td>
+            <td>Wybór szablonu wyglądu bloga (szczegóły w <a href="appearance.html">Wygląd</a>)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Stopka</h3>
+      <p>Treść stopki strony głównej. Obsługuje HTML - możesz dodać linki, informacje prawne itp.</p>
+
+      <h2 id="wyglad">Zakładka: Wygląd</h2>
+
+      <p>Ustawienia wyglądu szablonu, sidebara i strony kontaktowej zostały przeniesione do osobnej sekcji. Szczegółowa dokumentacja dostępna jest na stronie <a href="appearance.html">Wygląd</a>.</p>
+
+      <h2 id="skrypty">Zakładka: Skrypty i kod</h2>
+
+      <p>Dodawanie własnego kodu JavaScript do stron.</p>
+
+      <h3>Strona główna</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Pole</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Kod w &lt;head&gt;</strong></td>
+            <td>Skrypty ładowane w nagłówku (np. Google Analytics, Meta Pixel)</td>
+          </tr>
+          <tr>
+            <td><strong>Kod w stopce</strong></td>
+            <td>Skrypty ładowane przed &lt;/body&gt;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Strona przekierowania</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Pole</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Kod w &lt;head&gt;</strong></td>
+            <td>Skrypty na stronie przekierowania (przed przekierowaniem)</td>
+          </tr>
+          <tr>
+            <td><strong>Kod w stopce</strong></td>
+            <td>Skrypty ładowane przed przekierowaniem</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert bg-info-subtle border border-info text-info-emphasis">
+        <strong>Przykład Google Analytics:</strong>
+        <pre><code>&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <h3>Boty społecznościowe</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Wyłącz przekierowanie dla botów</strong></td>
+            <td>Boty Facebook, Twitter, LinkedIn, Slack, Telegram otrzymają stronę z meta tagami OG zamiast przekierowania. Pozwala to na prawidłowe wyświetlanie podglądów przy udostępnianiu.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="bezpieczenstwo">Zakładka: Bezpieczeństwo</h2>
+
+      <p>Ustawienia bezpieczeństwa i debugowania.</p>
+
+      <div class="alert bg-info-subtle border border-info text-info-emphasis">
+        <strong>2FA:</strong> Konfiguracja uwierzytelniania dwuskładnikowego (TOTP) dostępna jest w osobnej sekcji. Szczegółowa dokumentacja na stronie <a href="two-factor-auth.html">2FA</a>.
+      </div>
+
+      <h3>Dane administratora</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Pole</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nowa nazwa użytkownika</strong></td>
+            <td>Zmiana loginu. Zostaw puste, aby nie zmieniać.</td>
+          </tr>
+          <tr>
+            <td><strong>Nowe hasło</strong></td>
+            <td>Zmiana hasła. Zostaw puste, aby nie zmieniać.</td>
+          </tr>
+          <tr>
+            <td><strong>Potwierdzenie hasła</strong></td>
+            <td>Powtórz nowe hasło</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Debugowanie</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Włącz debugowanie</strong></td>
+            <td>Aktywuje tryb debug (rozszerzone logowanie)</td>
+          </tr>
+          <tr>
+            <td><strong>Zapisuj błędy do pliku</strong></td>
+            <td>Błędy zapisywane do /storage/logs/</td>
+          </tr>
+          <tr>
+            <td><strong>Wyświetlaj błędy na stronie</strong></td>
+            <td><span class="text-danger">UWAGA!</span> Tylko dla środowiska deweloperskiego! Wyświetla błędy PHP.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Poziom raportowania błędów</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Poziom</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>E_ALL</strong></td>
+            <td>Wszystkie błędy i ostrzeżenia</td>
+          </tr>
+          <tr>
+            <td><strong>E_ALL bez DEPRECATED</strong></td>
+            <td>Bez ostrzeżeń o przestarzałym kodzie</td>
+          </tr>
+          <tr>
+            <td><strong>E_ALL bez NOTICE</strong></td>
+            <td>Bez ostrzeżeń typu notice</td>
+          </tr>
+          <tr>
+            <td><strong>ERROR + WARNING</strong></td>
+            <td>Tylko błędy i ostrzeżenia</td>
+          </tr>
+          <tr>
+            <td><strong>Tylko ERROR</strong></td>
+            <td>Tylko krytyczne błędy</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert bg-warning-subtle border border-warning text-warning-emphasis">
+        <strong>Ważne:</strong> Na serwerze produkcyjnym ustaw "Zapisuj błędy do pliku" i wyłącz "Wyświetlaj błędy na stronie".
+      </div>
+
+      <h2 id="powiadomienia">Zakładka: Powiadomienia Email</h2>
+
+      <p>Konfiguracja wysyłania emaili i automatycznych powiadomień.</p>
+
+      <h3>Konfiguracja SMTP</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Pole</th>
+            <th>Przykład</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Host SMTP</strong></td>
+            <td>smtp.gmail.com</td>
+            <td>Adres serwera SMTP</td>
+          </tr>
+          <tr>
+            <td><strong>Port</strong></td>
+            <td>587 lub 465</td>
+            <td>Port SMTP (587 dla TLS, 465 dla SSL)</td>
+          </tr>
+          <tr>
+            <td><strong>Szyfrowanie</strong></td>
+            <td>TLS lub SSL</td>
+            <td>Typ szyfrowania połączenia</td>
+          </tr>
+          <tr>
+            <td><strong>Użytkownik</strong></td>
+            <td>twoj@email.com</td>
+            <td>Login do serwera SMTP</td>
+          </tr>
+          <tr>
+            <td><strong>Hasło</strong></td>
+            <td>***</td>
+            <td>Hasło SMTP (szyfrowane AES-256)</td>
+          </tr>
+          <tr>
+            <td><strong>Email nadawcy</strong></td>
+            <td>noreply@example.com</td>
+            <td>Adres "Od" w emailach</td>
+          </tr>
+          <tr>
+            <td><strong>Nazwa nadawcy</strong></td>
+            <td>RedirectCMS</td>
+            <td>Nazwa wyświetlana przy adresie</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Przycisk <strong>"Testuj połączenie"</strong> wysyła testowy email na adres powiadomień.</p>
+
+      <h3>Automatyczne powiadomienia</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Opcja</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Włącz powiadomienia</strong></td>
+            <td>Aktywuje automatyczne raporty email</td>
+          </tr>
+          <tr>
+            <td><strong>Email do powiadomień</strong></td>
+            <td>Adres, na który wysyłane są raporty</td>
+          </tr>
+          <tr>
+            <td><strong>Częstotliwość</strong></td>
+            <td>Codziennie / Co 3 dni / Co tydzień / Co 2 tygodnie / Co miesiąc / Własna</td>
+          </tr>
+          <tr>
+            <td><strong>Godzina wysyłania</strong></td>
+            <td>O której godzinie wysłać raport (format 24h)</td>
+          </tr>
+          <tr>
+            <td><strong>Liczba linków</strong></td>
+            <td>Ile top linków uwzględnić w raporcie (1-50)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Zawartość raportu</h3>
+      <p>Automatyczny raport email zawiera:</p>
+      <ul>
+        <li>Podsumowanie kliknięć (dzisiaj, tydzień, miesiąc)</li>
+        <li>Porównanie z poprzednim okresem</li>
+        <li>Lista top linków z liczbą kliknięć</li>
+        <li>Alerty o anomaliach (jeśli wystąpiły)</li>
+      </ul>
+
+      <!-- Navigation -->
+      <nav class="docs-nav-footer d-flex justify-content-between">
+        <a href="statistics.html" class="btn btn-outline-primary btn-prev">Poprzedni: Statystyki</a>
+        <a href="appearance.html" class="btn btn-outline-primary btn-next">Następny: Wygląd</a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

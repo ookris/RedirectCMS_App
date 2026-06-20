@@ -1,0 +1,25 @@
+{
+  "name": "MiniNewspaper",
+  "author": "Zafer Zent (adaptacja RedirectCMS)",
+  "version": "1.0.0",
+  "description": "Minimalistyczny motyw newsowy inspirowany MiniNewspaper Blogger Template.",
+  "supports": [
+    "sidebar",
+    "contact_page",
+    "gallery",
+    "lightbox"
+  ],
+  "colors": [
+    { "key": "primary", "label": "Primary", "default": "#666666" },
+    { "key": "text", "label": "Text", "default": "#111111" },
+    { "key": "body_bg", "label": "Body Background", "default": "#fafafa" },
+    { "key": "header_bg", "label": "Header Background", "default": "#ffffff" },
+    { "key": "footer_bg", "label": "Footer Background", "default": "#666666" },
+    { "key": "footer_text", "label": "Footer Text", "default": "#ffffff" }
+  ],
+  "image_sizes": {
+    "listing": { "width": 420, "height": 260, "crop": true, "label": "Listing" },
+    "post": { "width": 980, "height": 560, "crop": true, "label": "Post Cover" },
+    "gallery": { "width": 1200, "height": 900, "crop": false, "label": "Gallery" }
+  }
+}

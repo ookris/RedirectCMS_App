@@ -1,0 +1,33 @@
+{
+  "name": "Pixel Blog",
+  "author": "RedirectCMS",
+  "version": "1.0.0",
+  "description": "Nowoczesny szablon bloga w stylu magazynu — topbar z social media, hero sekcja, sticky sidebar z zakładkami. Inspirowany Pixel Blogger Template.",
+  "published_date": "2026-03-29",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "primary",     "label": "Kolor główny (przyciski, linki, akcenty)",  "default": "#2942ee"},
+    {"key": "header_bg",   "label": "Tło nagłówka (środek)",                     "default": "#ffffff"},
+    {"key": "header_text", "label": "Kolor tekstu nagłówka",                     "default": "#2e2e2e"},
+    {"key": "nav_bg",      "label": "Tło paska nawigacji",                       "default": "#ffffff"},
+    {"key": "nav_text",    "label": "Kolor linków nawigacji",                    "default": "#2e2e2e"},
+    {"key": "topbar_bg",   "label": "Tło górnego paska (social media)",          "default": "#1a1a2e"},
+    {"key": "topbar_text", "label": "Tekst górnego paska",                       "default": "#ccccdd"},
+    {"key": "accent",      "label": "Akcent drugorzędny (tagi, hover)",          "default": "#e83e8c"},
+    {"key": "footer_bg",   "label": "Tło stopki",                                "default": "#1a1a2e"},
+    {"key": "footer_text", "label": "Tekst stopki",                              "default": "#9999aa"},
+    {"key": "body_bg",     "label": "Tło strony",                                "default": "#f7f7f7"}
+  ],
+
+  "image_sizes": {
+    "featured":      {"width": 1200, "height": 630,  "crop": true,  "label": "Obraz wyróżniający (hero)"},
+    "post":          {"width": 800,  "height": 450,  "crop": true,  "label": "Obraz wpisu"},
+    "thumbnail":     {"width": 300,  "height": 200,  "crop": true,  "label": "Miniatura sidebar"},
+    "hero_wide":     {"width": 780,  "height": 430,  "crop": true,  "label": "Hero — główny kafelek"},
+    "hero_small":    {"width": 380,  "height": 205,  "crop": true,  "label": "Hero — mały kafelek"},
+    "gallery":       {"width": 1200, "height": 800,  "crop": false, "label": "Galeria — pełny rozmiar"},
+    "gallery_thumb": {"width": 300,  "height": 200,  "crop": true,  "label": "Miniatura galerii"}
+  }
+}

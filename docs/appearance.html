@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wygląd - Dokumentacja RedirectCMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/sandstone/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book me-2" viewBox="0 0 16 16">
+        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+      </svg>
+      Dokumentacja RedirectCMS
+    </a>
+    <a href="../index.php" class="btn btn-light btn-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-1" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg>
+      Powrót do panelu
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block docs-sidebar py-3">
+      <div class="position-sticky" style="top: 70px;">
+
+        <div class="sidebar-heading">Wprowadzenie</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getting-started.html">Pierwsze kroki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Panel</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">Powiadomienia</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Zarządzanie treścią</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="links.html">Linki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="campaigns.html">Kampanie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages.html">Strony</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Kategorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tags.html">Tagi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="affiliate-programs.html">Programy afiliacyjne</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="import-export.html">Import / Export</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Analityka</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="statistics.html">Statystyki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Konfiguracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Ustawienia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="appearance.html">Wygląd</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backup.html">Backup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sitemap-rss.html">RSS i sitemap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cron.html">Zadania Cron</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Bezpieczeństwo</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="two-factor-auth.html">2FA</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Administracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="geo-cache.html">Cache Geo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Zasoby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logs.html">Logi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="audit-log.html">Audit Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="broken-links.html">Sprawdzanie linków</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file-manager.html">Menedżer plików</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 docs-content">
+
+      <nav aria-label="breadcrumb" class="docs-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dokumentacja</a></li>
+          <li class="breadcrumb-item active">Wygląd</li>
+        </ol>
+      </nav>
+
+      <h1>Wygląd</h1>
+
+      <p class="lead">
+        Zakładka Wygląd w ustawieniach pozwala dostosować wygląd publicznej części serwisu: szablon, kolory, branding, sidebar oraz stronę kontaktową.
+      </p>
+
+      <h2>Szablon (Motyw)</h2>
+
+      <p>RedirectCMS obsługuje system szablonów oparty o plik <code>theme.json</code>. Każdy szablon definiuje:</p>
+      <ul>
+        <li><strong>Obsługiwane funkcje</strong> (<code>supports</code>) - np. sidebar, lightbox, komentarze</li>
+        <li><strong>Paletę kolorów</strong> (<code>colors</code>) - kolory do wyboru w konfiguracji</li>
+        <li><strong>Rozmiary obrazków</strong> (<code>image_sizes</code>) - wymiary miniatur generowanych przez system</li>
+      </ul>
+
+      <h3>Wybór szablonu</h3>
+      <p>Jeśli dostępnych jest kilka szablonów, możesz wybrać aktywny z listy. Zmiana szablonu natychmiast wpływa na wygląd publicznej części serwisu.</p>
+
+      <h3>Kolory motywu</h3>
+      <p>Dla aktywnego szablonu możesz wybrać schemat kolorów z predefiniowanej palety. Kolory są aplikowane przez CSS custom properties (<code>--theme-*</code>).</p>
+
+      <h2>Branding</h2>
+
+      <h3>Logo</h3>
+      <p>Prześlij logo serwisu wyświetlane w nagłówku publicznej strony. Obsługiwane formaty: JPG, PNG, WebP. Zalecany format: PNG z przezroczystością.</p>
+
+      <h3>Favicon</h3>
+      <p>Prześlij favicon wyświetlany w zakładce przeglądarki. Zalecany rozmiar: 32x32 lub 64x64 pikseli.</p>
+
+      <h2>Regeneracja miniatur</h2>
+
+      <p>Przycisk "Regeneruj miniatury" uruchamia ponowne przycięcie wszystkich obrazków do rozmiarów zdefiniowanych w <code>theme.json</code>. Przydatne po:</p>
+      <ul>
+        <li>Zmianie aktywnego szablonu z innymi rozmiarami miniatur</li>
+        <li>Zmianie ustawień <code>image_sizes</code> w pliku szablonu</li>
+        <li>Dodaniu nowych rozmiarów do istniejącego szablonu</li>
+      </ul>
+
+      <div class="alert bg-info-subtle border border-info text-info-emphasis">
+        <strong>Uwaga:</strong> Regeneracja miniatur może chwilę potrwać w zależności od liczby obrazków. Miniatury są zapisywane w <code>/uploads/cropped/{sizeKey}/</code>.
+      </div>
+
+      <p>Sterownik kompresji i szczegółowe ustawienia jakości (JPEG, PNG, WebP) konfiguruje się na oddzielnej stronie — patrz <a href="image-optimizer.html">Optymalizacja obrazów</a>.</p>
+
+      <h2>Sidebar</h2>
+
+      <p>Jeśli aktywny szablon obsługuje sidebar (<code>"sidebar"</code> w <code>supports</code>), możesz skonfigurować widgety bocznego paska.</p>
+
+      <h3>Dostępne widgety</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Widget</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>popular_posts</strong></td>
+            <td>Najpopularniejsze linki (według liczby kliknięć)</td>
+          </tr>
+          <tr>
+            <td><strong>random_posts</strong></td>
+            <td>Losowe linki</td>
+          </tr>
+          <tr>
+            <td><strong>tag_cloud</strong></td>
+            <td>Chmura tagów z linkami do filtrowania</td>
+          </tr>
+          <tr>
+            <td><strong>categories</strong></td>
+            <td>Lista kategorii z liczbą linków</td>
+          </tr>
+          <tr>
+            <td><strong>social_links</strong></td>
+            <td>Linki do profili w mediach społecznościowych</td>
+          </tr>
+          <tr>
+            <td><strong>custom_html</strong></td>
+            <td>Dowolny HTML (np. baner reklamowy, kod osadzony)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Zarządzanie widgetami</h3>
+      <p>W panelu Wygląd możesz:</p>
+      <ul>
+        <li>Dodawać nowe widgety z listy dostępnych typów</li>
+        <li>Zmieniać kolejność widgetów (przeciągnij i upuść)</li>
+        <li>Konfigurować każdy widget (tytuł, liczba elementów, treść HTML)</li>
+        <li>Usuwać niepotrzebne widgety</li>
+      </ul>
+
+      <h2>Strona kontaktowa</h2>
+
+      <p>Możesz włączyć wbudowaną stronę kontaktową dostępną pod <code>/?page=contact</code>.</p>
+
+      <h3>Ustawienia formularza kontaktowego</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Ustawienie</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Włącz formularz kontaktowy</strong></td>
+            <td>Aktywuje stronę <code>/?page=contact</code></td>
+          </tr>
+          <tr>
+            <td><strong>Email odbiorcy</strong></td>
+            <td>Adres email, na który trafiają wiadomości z formularza</td>
+          </tr>
+          <tr>
+            <td><strong>Temat wiadomości</strong></td>
+            <td>Prefix tematu maila (np. "[RedirectCMS] Wiadomość od...")</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert bg-info-subtle border border-info text-info-emphasis">
+        <strong>Bezpieczeństwo formularza:</strong> Formularz kontaktowy posiada ochronę CSRF oraz rate limiting (maksymalnie 3 wiadomości na godzinę z jednego adresu IP).
+      </div>
+
+      <h2>Lightbox</h2>
+
+      <p>Jeśli aktywny szablon obsługuje lightbox (<code>"lightbox"</code> w <code>supports</code>), biblioteka Lightbox2 jest automatycznie ładowana na stronach publicznych. Umożliwia wyświetlanie obrazków w powiększeniu po kliknięciu.</p>
+
+      <!-- Navigation -->
+      <nav class="docs-nav-footer d-flex justify-content-between">
+        <a href="settings.html" class="btn btn-outline-primary btn-prev">Poprzedni: Ustawienia</a>
+        <a href="backup.html" class="btn btn-outline-primary btn-next">Następny: Backup</a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "PlusUI",
+  "author": "RedirectCMS",
+  "version": "1.0.0",
+  "description": "Nowoczesny szablon z trybem ciemnym inspirowany Plus UI Blogger Theme — hero z overlayem, siatka kart, pasek postępu czytania, spis treści, responsywna nawigacja.",
+  "published_date": "2026-03-29",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "primary",    "label": "Kolor główny (jasny motyw)",  "default": "#1976d2"},
+    {"key": "primary_d",  "label": "Kolor główny (ciemny motyw)", "default": "#8775f5"},
+    {"key": "accent",     "label": "Akcent (tagi, hover)",        "default": "#e91e63"},
+    {"key": "text",       "label": "Kolor tekstu głównego",       "default": "#08102b"},
+    {"key": "muted",      "label": "Tekst drugorzędny",           "default": "#989b9f"},
+    {"key": "border",     "label": "Kolor ramek i separatorów",   "default": "#e8ecf0"},
+    {"key": "body_bg",    "label": "Tło strony (jasny motyw)",    "default": "#fdfcff"},
+    {"key": "card_bg",    "label": "Tło kart (jasny motyw)",      "default": "#ffffff"},
+    {"key": "dark_bg",    "label": "Tło strony (ciemny motyw)",   "default": "#1e1e1e"},
+    {"key": "dark_card",  "label": "Tło kart (ciemny motyw)",     "default": "#2a2a2a"}
+  ],
+
+  "image_sizes": {
+    "featured":      {"width": 900,  "height": 506, "crop": true,  "label": "Wyróżniony wpis — hero (16:9)"},
+    "listing":       {"width": 420,  "height": 236, "crop": true,  "label": "Miniatura listingu (16:9)"},
+    "post":          {"width": 820,  "height": 460, "crop": true,  "label": "Obraz wpisu"},
+    "gallery":       {"width": 1200, "height": 800, "crop": false, "label": "Galeria pełny rozmiar"},
+    "gallery_thumb": {"width": 300,  "height": 200, "crop": true,  "label": "Miniatura galerii"}
+  }
+}

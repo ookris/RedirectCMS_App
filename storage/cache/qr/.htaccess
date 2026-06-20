@@ -1,0 +1,4 @@
+# Zezwól na dostęp do plików QR code (obrazki PNG)
+<FilesMatch "\.png$">
+  Require all granted
+</FilesMatch>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Dokumentacja RedirectCMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/sandstone/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book me-2" viewBox="0 0 16 16">
+        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+      </svg>
+      Dokumentacja RedirectCMS
+    </a>
+    <a href="../index.php" class="btn btn-light btn-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-1" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg>
+      Powrót do panelu
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block docs-sidebar py-3">
+      <div class="position-sticky" style="top: 70px;">
+
+        <div class="sidebar-heading">Wprowadzenie</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getting-started.html">Pierwsze kroki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Panel</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Zarządzanie treścią</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="links.html">Linki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="campaigns.html">Kampanie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages.html">Strony</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Kategorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tags.html">Tagi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="affiliate-programs.html">Programy afiliacyjne</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="import-export.html">Import / Export</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Analityka</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="statistics.html">Statystyki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Konfiguracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Ustawienia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appearance.html">Wygląd</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="image-optimizer.html">Optymalizacja obrazów</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backup.html">Backup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sitemap-rss.html">RSS i sitemap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cron.html">Zadania Cron</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Bezpieczeństwo</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="two-factor-auth.html">2FA</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Administracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="geo-cache.html">Cache Geo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Zasoby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logs.html">Logi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="audit-log.html">Audit Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="broken-links.html">Sprawdzanie linków</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file-manager.html">Menedżer plików</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 docs-content">
+
+      <nav aria-label="breadcrumb" class="docs-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dokumentacja</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+
+      <h1>Dashboard</h1>
+
+      <p class="lead">
+        Dashboard to główny panel RedirectCMS, wyświetlający najważniejsze informacje o systemie i statystykach w jednym miejscu.
+      </p>
+
+      <h2>Pasek nawigacyjny</h2>
+
+      <p>W prawym górnym rogu paska nawigacyjnego znajdziesz:</p>
+      <ul>
+        <li><strong>Dzwonek powiadomień</strong> - ikona dzwonka z badge'em liczbowym. Kliknij, aby zobaczyć listę powiadomień systemowych (np. wykryte martwe linki, anomalie ruchu).</li>
+        <li><strong>Wyszukiwarka globalna</strong> - ikona lupy otwiera pole wyszukiwania. Umożliwia szybkie wyszukiwanie linków, kategorii i tagów z dowolnego miejsca w panelu.</li>
+      </ul>
+
+      <h2>Widgety statystyk</h2>
+
+      <p>Na górze dashboardu znajdziesz widgety z kluczowymi metrykami:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Widget</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Łącznie linków</strong></td>
+            <td>Całkowita liczba utworzonych linków w systemie</td>
+          </tr>
+          <tr>
+            <td><strong>Wszystkie kliknięcia</strong></td>
+            <td>Suma wszystkich kliknięć we wszystkie linki</td>
+          </tr>
+          <tr>
+            <td><strong>Średnia na link</strong></td>
+            <td>Średnia liczba kliknięć przypadająca na jeden link</td>
+          </tr>
+          <tr>
+            <td><strong>Kliknięcia dzisiaj</strong></td>
+            <td>Liczba kliknięć zarejestrowanych dzisiaj</td>
+          </tr>
+          <tr>
+            <td><strong>Unikalni dzisiaj</strong></td>
+            <td>Liczba unikalnych adresów IP dzisiaj</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Sekcja statystyk</h2>
+
+      <p>Widget "Statystyki" zawiera dodatkowe informacje:</p>
+      <ul>
+        <li><strong>Kliknięcia 7 dni</strong> - suma kliknięć z ostatniego tygodnia</li>
+        <li><strong>Kliknięcia 30 dni</strong> - suma kliknięć z ostatniego miesiąca</li>
+        <li><strong>Linki aktywne</strong> - liczba opublikowanych linków</li>
+        <li><strong>W koszu</strong> - liczba linków przeniesionych do kosza</li>
+      </ul>
+
+      <h2>Sekcja kategorii</h2>
+
+      <p>Pokazuje rozkład linków według kategorii:</p>
+      <ul>
+        <li>Nazwa kategorii z kolorem</li>
+        <li>Liczba linków w każdej kategorii</li>
+        <li>Procent udziału w całkowitej liczbie linków</li>
+      </ul>
+
+      <h2>Sekcja zasobów</h2>
+
+      <p>Informacje o wykorzystaniu zasobów serwera:</p>
+      <ul>
+        <li><strong>Pliki</strong> - wykorzystanie limitu miejsca na pliki (jeśli ustawiony)</li>
+        <li><strong>Baza danych</strong> - wykorzystanie limitu miejsca na bazę danych</li>
+        <li>Paski postępu pokazują procent wykorzystania</li>
+      </ul>
+
+      <div class="alert bg-info-subtle border border-info text-info-emphasis">
+        <strong>Wskazówka:</strong> Limity możesz skonfigurować w <a href="settings.html">Ustawieniach</a> w zakładce "Ogólne".
+      </div>
+
+      <h2>Informacje o systemie</h2>
+
+      <p>Widget "System" wyświetla dane techniczne:</p>
+      <ul>
+        <li><strong>Wersja PHP</strong> - zainstalowana wersja PHP</li>
+        <li><strong>Baza danych</strong> - typ i wersja bazy danych</li>
+        <li><strong>Strefa czasowa</strong> - skonfigurowana strefa czasowa</li>
+        <li><strong>Środowisko</strong> - tryb pracy (development/production)</li>
+        <li><strong>RedirectCMS: vX.X.X</strong> - aktualna wersja aplikacji; gdy dostępna jest nowsza wersja, obok numeru pojawia się link "Dostępna aktualizacja"</li>
+      </ul>
+
+      <h2>Baner dostępnej aktualizacji</h2>
+
+      <p>Gdy system wykryje nowszą wersję RedirectCMS (sprawdzenie raz na 24 h), na dashboardzie pojawia się niebieski baner informacyjny z tytułem aktualizacji i linkiem do szczegółów. Baner jest widoczny wyłącznie na stronie dashboardu.</p>
+
+      <h2>Banery licencji i wersji DEMO</h2>
+
+      <p>W zależności od stanu licencji u góry strony mogą pojawiać się dodatkowe banery:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Stan licencji</th>
+            <th>Rodzaj banera</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>demo_active</strong></td>
+            <td>Informacyjny / ostrzeżenie</td>
+            <td>Wersja demonstracyjna — wyświetlana liczba pozostałych dni. Gdy zostało ≤ 3 dni, baner zmienia kolor na żółty.</td>
+          </tr>
+          <tr>
+            <td><strong>demo_expired</strong></td>
+            <td>Błąd</td>
+            <td>Wersja DEMO wygasła — linki i logowanie są zablokowane. Baner zawiera link do strony zakupu pełnej licencji.</td>
+          </tr>
+          <tr>
+            <td><strong>warning</strong></td>
+            <td>Ostrzeżenie</td>
+            <td>Licencja nie odpowiada od 24–48 h — tryb łagodny, operacje dostępne.</td>
+          </tr>
+          <tr>
+            <td><strong>blocked</strong></td>
+            <td>Błąd</td>
+            <td>Licencja zablokowana (brak odpowiedzi ponad 48 h lub nieważny klucz) — operacje na linkach i logowanie wyłączone.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Alerty i powiadomienia</h2>
+
+      <p>Dashboard może wyświetlać różne alerty:</p>
+      <ul>
+        <li><strong>Anomalie ruchu</strong> - nagły wzrost lub spadek kliknięć</li>
+        <li><strong>Uszkodzone linki</strong> - informacja o wykrytych martwych linkach</li>
+        <li><strong>Limity zasobów</strong> - ostrzeżenia o zbliżającym się limicie</li>
+        <li><strong>Błędy systemu</strong> - informacje o problemach</li>
+      </ul>
+
+      <p>Pełna lista powiadomień systemowych (z filtrami i szczegółami) dostępna jest na stronie <a href="notifications.html">Powiadomienia</a>, do której prowadzi ikona dzwonka w pasku nawigacyjnym.</p>
+
+      <h2>Ostatnie linki</h2>
+
+      <p>Tabela z 5 ostatnio dodanymi linkami zawiera:</p>
+      <ul>
+        <li>Slug linku (klikalny)</li>
+        <li>URL docelowy (skrócony)</li>
+        <li>Kategoria</li>
+        <li>Liczba kliknięć</li>
+        <li>Data utworzenia</li>
+      </ul>
+
+      <h2>Top linki (30 dni)</h2>
+
+      <p>Lista 5 najpopularniejszych linków z ostatnich 30 dni:</p>
+      <ul>
+        <li>Slug linku</li>
+        <li>Kategoria</li>
+        <li>Liczba kliknięć w okresie</li>
+        <li>Trend (wzrost/spadek)</li>
+      </ul>
+
+      <h2>Nieużywane linki</h2>
+
+      <p>Lista linków bez żadnych kliknięć - przydatna do identyfikacji nieaktywnych linków, które można usunąć lub zaktualizować.</p>
+
+      <!-- Navigation -->
+      <nav class="docs-nav-footer d-flex justify-content-between">
+        <a href="getting-started.html" class="btn btn-outline-primary btn-prev">Poprzedni: Pierwsze kroki</a>
+        <a href="links.html" class="btn btn-outline-primary btn-next">Następny: Linki</a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

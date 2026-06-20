@@ -1,0 +1,23 @@
+# RedirectCMS - mod_rewrite tylko dla skróconych linków
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Nie przepisuj żądań do katalogu admin (używa standardowych PHP URLi)
+    RewriteCond %{REQUEST_URI} ^/.*admin/ [NC]
+    RewriteRule ^ - [L]
+    
+    # Nie przepisuj żądań do rzeczywistych plików
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+    
+    # Nie przepisuj żądań do rzeczywistych katalogów
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    
+    # Wszystkie pozostałe żądania (slugi) kieruj do index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+
+

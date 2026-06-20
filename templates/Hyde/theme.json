@@ -1,0 +1,25 @@
+{
+  "name": "Hyde",
+  "author": "RedirectCMS (inspired by zaferzent/Hyde-Blogger-Template)",
+  "version": "1.0.0",
+  "description": "Dwukolumnowy motyw blogowy inspirowany Hyde: ciemny, staly sidebar i prosta kolumna tresci.",
+  "published_date": "2026-04-04",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "primary", "label": "Kolor linkow", "default": "#268bd2"},
+    {"key": "accent", "label": "Akcent", "default": "#ac4142"},
+    {"key": "header_bg", "label": "Tlo sidebara", "default": "#202020"},
+    {"key": "header_text", "label": "Tekst sidebara", "default": "#ffffff"},
+    {"key": "text", "label": "Tekst glowny", "default": "#515151"},
+    {"key": "body_bg", "label": "Tlo strony", "default": "#ffffff"}
+  ],
+
+  "image_sizes": {
+    "listing": {"width": 960, "height": 540, "crop": true, "label": "Obrazek listy wpisow"},
+    "post": {"width": 1200, "height": 630, "crop": true, "label": "Obraz wpisu"},
+    "gallery": {"width": 1200, "height": 800, "crop": false, "label": "Galeria"},
+    "gallery_thumb": {"width": 320, "height": 220, "crop": true, "label": "Miniatura galerii"}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Default Blog Theme",
+  "author": "RedirectCMS",
+  "version": "3.0.0",
+  "description": "Domyślny szablon bloga — Clean Editorial z pełną obsługą logo, nawigacji, social footer i powiązanych wpisów",
+  "published_date": "2026-02-18",
+  "email": "support@redirectcms.local",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "primary",      "label": "Kolor główny (przyciski, linki)",  "default": "#7952b3"},
+    {"key": "header_bg",    "label": "Tło nagłówka",                     "default": "#6f42c1"},
+    {"key": "header_text",  "label": "Tekst nagłówka",                   "default": "#ffffff"},
+    {"key": "accent",       "label": "Akcent (tagi, odznaki)",           "default": "#e83e8c"},
+    {"key": "footer_bg",    "label": "Tło stopki",                       "default": "#343a40"},
+    {"key": "footer_text",  "label": "Tekst stopki",                     "default": "#adb5bd"},
+    {"key": "body_bg",      "label": "Tło strony",                       "default": "#f8f9fa"}
+  ],
+
+  "image_sizes": {
+    "featured":      {"width": 1200, "height": 630,  "crop": true,  "label": "Obraz wyróżniający"},
+    "post":          {"width": 800,  "height": 450,  "crop": true,  "label": "Obraz wpisu"},
+    "gallery":       {"width": 1200, "height": 800,  "crop": false, "label": "Obraz galerii"},
+    "gallery_thumb": {"width": 300,  "height": 200,  "crop": true,  "label": "Miniatura galerii"}
+  }
+}

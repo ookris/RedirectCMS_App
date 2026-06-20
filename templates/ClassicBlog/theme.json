@@ -1,0 +1,28 @@
+{
+  "name": "Classic Blog",
+  "author": "RedirectCMS",
+  "version": "1.0.0",
+  "description": "Klasyczny szablon bloga w stylu editorial magazine — Playfair Display + Inter, pełna stopka z widgetami, slider, sidebar",
+  "published_date": "2026-02-28",
+  "email": "support@redirectcms.pl",
+
+  "supports": ["sidebar", "contact_page", "gallery", "lightbox"],
+
+  "colors": [
+    {"key": "primary",     "label": "Kolor główny (akcent, przyciski)",    "default": "#c0392b"},
+    {"key": "header_bg",   "label": "Tło nagłówka i stopki",               "default": "#1c2331"},
+    {"key": "header_text", "label": "Tekst nagłówka",                      "default": "#ffffff"},
+    {"key": "accent",      "label": "Akcent drugorzędny (tagi, hover)",    "default": "#e67e22"},
+    {"key": "footer_bg",   "label": "Tło stopki",                          "default": "#1c2331"},
+    {"key": "footer_text", "label": "Tekst stopki",                        "default": "#9aa5b4"},
+    {"key": "body_bg",     "label": "Tło strony (ciepła biel)",            "default": "#f5f5f0"}
+  ],
+
+  "image_sizes": {
+    "featured":      {"width": 1200, "height": 630,  "crop": true,  "label": "Obraz wyróżniający (slider)"},
+    "post":          {"width": 800,  "height": 450,  "crop": true,  "label": "Obraz wpisu"},
+    "thumbnail":     {"width": 300,  "height": 200,  "crop": true,  "label": "Miniatura sidebar"},
+    "gallery":       {"width": 1200, "height": 800,  "crop": false, "label": "Obraz galerii"},
+    "gallery_thumb": {"width": 300,  "height": 200,  "crop": true,  "label": "Miniatura galerii"}
+  }
+}

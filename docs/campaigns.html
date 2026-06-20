@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kampanie - Dokumentacja RedirectCMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/sandstone/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book me-2" viewBox="0 0 16 16">
+        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+      </svg>
+      Dokumentacja RedirectCMS
+    </a>
+    <a href="../index.php" class="btn btn-light btn-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left me-1" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg>
+      Powrót do panelu
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block docs-sidebar py-3">
+      <div class="position-sticky" style="top: 70px;">
+
+        <div class="sidebar-heading">Wprowadzenie</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="getting-started.html">Pierwsze kroki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Panel</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">Powiadomienia</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Zarządzanie treścią</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="links.html">Linki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="campaigns.html">Kampanie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages.html">Strony</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Kategorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tags.html">Tagi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="affiliate-programs.html">Programy afiliacyjne</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="import-export.html">Import / Export</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Analityka</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="statistics.html">Statystyki</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Konfiguracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Ustawienia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appearance.html">Wygląd</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="image-optimizer.html">Optymalizacja obrazów</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backup.html">Backup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sitemap-rss.html">RSS i sitemap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cron.html">Zadania Cron</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Bezpieczeństwo</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="two-factor-auth.html">2FA</a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Administracja</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="geo-cache.html">Cache Geo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Zasoby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logs.html">Logi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="audit-log.html">Audit Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="broken-links.html">Sprawdzanie linków</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file-manager.html">Menedżer plików</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 docs-content">
+
+      <nav aria-label="breadcrumb" class="docs-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dokumentacja</a></li>
+          <li class="breadcrumb-item active">Kampanie</li>
+        </ol>
+      </nav>
+
+      <h1>Kampanie</h1>
+
+      <p class="lead">
+        Kampanie pozwalają grupować linki w zestawy tematyczne i śledzić ich łączne statystyki. Idealne do zarządzania akcjami marketingowymi.
+      </p>
+
+      <h2>Czym są kampanie?</h2>
+
+      <p>Kampania to nazwany zestaw linków, który umożliwia:</p>
+      <ul>
+        <li>Grupowanie linków powiązanych tematycznie lub czasowo</li>
+        <li>Śledzenie łącznych statystyk kliknięć dla całego zestawu</li>
+        <li>Zarządzanie linkami kampanii z jednego miejsca</li>
+        <li>Łatwe porównanie skuteczności różnych kampanii</li>
+      </ul>
+
+      <h2>Lista kampanii</h2>
+
+      <p>Strona "Kampanie" wyświetla wszystkie kampanie z informacjami:</p>
+      <ul>
+        <li><strong>Nazwa</strong> - nazwa kampanii</li>
+        <li><strong>Opis</strong> - krótki opis kampanii</li>
+        <li><strong>Liczba linków</strong> - ile linków jest przypisanych</li>
+        <li><strong>Kliknięcia</strong> - łączna suma kliknięć wszystkich linków</li>
+        <li><strong>Data utworzenia</strong> - kiedy kampania została dodana</li>
+        <li><strong>Akcje</strong> - podgląd szczegółów, edycja, usuwanie</li>
+      </ul>
+
+      <h2>Tworzenie kampanii</h2>
+
+      <p>Aby utworzyć nową kampanię, kliknij przycisk "Nowa kampania".</p>
+
+      <h3>Pola formularza</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Pole</th>
+            <th>Wymagane</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nazwa</strong></td>
+            <td>Tak</td>
+            <td>Nazwa kampanii (np. "Black Friday 2024", "Newsletter Marzec")</td>
+          </tr>
+          <tr>
+            <td><strong>Opis</strong></td>
+            <td>Nie</td>
+            <td>Dodatkowy opis lub notatka o kampanii</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Przypisywanie linków do kampanii</h2>
+
+      <p>Linki można przypisać do kampanii na dwa sposoby:</p>
+
+      <h3>Z poziomu kampanii</h3>
+      <ol>
+        <li>Otwórz szczegóły kampanii klikając jej nazwę</li>
+        <li>Kliknij "Dodaj linki"</li>
+        <li>Wybierz linki z listy i zatwierdź</li>
+      </ol>
+
+      <h3>Z poziomu linku</h3>
+      <p>Podczas tworzenia lub edycji linku możesz przypisać go do kampanii wybierając ją z listy rozwijanej.</p>
+
+      <h2>Szczegóły kampanii</h2>
+
+      <p>Widok szczegółów kampanii zawiera:</p>
+
+      <h3>Podsumowanie statystyk</h3>
+      <ul>
+        <li><strong>Łączne kliknięcia</strong> - suma kliknięć wszystkich linków w kampanii</li>
+        <li><strong>Kliknięcia dzisiaj</strong> - aktywność z bieżącego dnia</li>
+        <li><strong>Kliknięcia 7 dni</strong> - aktywność z ostatniego tygodnia</li>
+        <li><strong>Liczba linków</strong> - ile linków wchodzi w skład kampanii</li>
+      </ul>
+
+      <h3>Wykres kliknięć</h3>
+      <p>Interaktywny wykres słupkowy pokazujący dzienne kliknięcia dla kampanii w wybranym przedziale czasowym (7, 30 lub 90 dni).</p>
+
+      <h3>Lista linków kampanii</h3>
+      <p>Tabela ze wszystkimi linkami należącymi do kampanii, wraz z ich indywidualnymi statystykami:</p>
+      <ul>
+        <li>Slug i tytuł linku</li>
+        <li>URL docelowy</li>
+        <li>Kliknięcia (łącznie i z ostatnich 7 dni)</li>
+        <li>Opcja usunięcia linku z kampanii</li>
+      </ul>
+
+      <h2>Edycja kampanii</h2>
+
+      <p>Aby edytować kampanię:</p>
+      <ol>
+        <li>Kliknij przycisk "Edytuj" przy wybranej kampanii</li>
+        <li>Zmień nazwę lub opis</li>
+        <li>Kliknij "Zapisz"</li>
+      </ol>
+
+      <h2>Usuwanie kampanii</h2>
+
+      <p>Aby usunąć kampanię:</p>
+      <ol>
+        <li>Kliknij przycisk "Usuń" przy wybranej kampanii</li>
+        <li>Potwierdź usunięcie</li>
+      </ol>
+
+      <div class="alert bg-warning-subtle border border-warning text-warning-emphasis">
+        <strong>Ważne:</strong> Po usunięciu kampanii, linki do niej przypisane pozostają w systemie, ale tracą powiązanie z kampanią.
+      </div>
+
+      <h2>Przykłady zastosowań</h2>
+
+      <ul>
+        <li><strong>Black Friday</strong> - wszystkie linki z ofertami wyprzedaży</li>
+        <li><strong>Newsletter Marzec 2024</strong> - linki wysłane w newsletterze</li>
+        <li><strong>Kampania Instagram Q1</strong> - linki promowane w mediach społecznościowych</li>
+        <li><strong>Partnerstwo - Marka X</strong> - linki afiliacyjne konkretnego partnera</li>
+      </ul>
+
+      <h2>Dobre praktyki</h2>
+
+      <ul class="feature-list">
+        <li>Nadawaj kampaniom opisowe nazwy z datą lub sezonem</li>
+        <li>Używaj kampanii do grupowania linków z jednej akcji marketingowej</li>
+        <li>Regularnie przeglądaj statystyki kampanii, aby ocenić ich skuteczność</li>
+        <li>Archiwizuj zakończone kampanie zamiast je usuwać</li>
+      </ul>
+
+      <!-- Navigation -->
+      <nav class="docs-nav-footer d-flex justify-content-between">
+        <a href="links.html" class="btn btn-outline-primary btn-prev">Poprzedni: Linki</a>
+        <a href="pages.html" class="btn btn-outline-primary btn-next">Następny: Strony</a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
