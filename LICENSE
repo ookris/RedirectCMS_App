@@ -1,156 +1,326 @@
-# Licencja na Oprogramowanie (EULA)
+PROPRIETARY COMMERCIAL LICENSE
+Copyright (c) 2025-2026 Krzysztof Janiczek. All Rights Reserved.
 
-**RedirectCMS v2.0** · Wersja dokumentu: 08.03.2026 r.
+This is proprietary software. Viewing the source code does not grant any
+rights to use, copy, modify, or distribute this software. A valid license
+key obtained through purchase at https://redirectcms.pl is required.
 
-Umowa Licencyjna Użytkownika Końcowego regulująca zasady korzystania z Oprogramowania RedirectCMS nabytego za pośrednictwem sklepu internetowego.
+Unauthorized copying, redistribution, sublicensing, or use of this software
+without a valid license key is strictly prohibited.
 
-Przed zainstalowaniem lub uruchomieniem Oprogramowania należy uważnie przeczytać niniejszą Umowę. Zainstalowanie, skopiowanie lub inne użycie Oprogramowania oznacza akceptację wszystkich jej postanowień.
+Full terms are provided below in Polish (End User License Agreement / EULA).
+For a summary in English, visit: https://redirectcms.pl/license
 
----
+------------------------------------------------------------------------
 
-## § 1. Definicje
+LICENCJA NA OPROGRAMOWANIE (EULA)
 
-- **Oprogramowanie** – aplikacja webowa RedirectCMS (wraz z kodem źródłowym PHP, skryptami SQL, plikami szablonów, dokumentacją i innymi plikami dostarczonymi w ramach jednorazowej płatności), umożliwiająca zarządzanie przekierowaniami URL, stronami i kampaniami marketingowymi, przeznaczona do samodzielnej instalacji na serwerze Licencjobiorcy.
-- **Licencjodawca / Sprzedawca** – Krzysztof Janiczek, ul. Jana Pawła II 8/8, 59-700 Bolesławiec; kontakt przez formularz kontaktowy.
-- **Licencjobiorca** – osoba fizyczna lub prawna, która nabyła Oprogramowanie i zaakceptowała niniejszą Umowę.
-- **Konsument** – Licencjobiorca będący osobą fizyczną nabywającą Oprogramowanie w celach niezwiązanych bezpośrednio z jej działalnością gospodarczą lub zawodową (art. 22¹ Kodeksu cywilnego).
-- **PNPF** – Przedsiębiorca na Prawach Konsumenta: osoba fizyczna prowadząca działalność gospodarczą, zawierająca umowę nieposiadającą dla niej charakteru zawodowego (art. 38a Ustawy o prawach konsumenta).
-- **Klucz licencyjny** – unikalny ciąg znaków przypisany do Licencjobiorcy, dołączony do pakietu Oprogramowania, służący do weryfikacji ważności licencji i powiązania jej z domeną Licencjobiorcy.
-- **Domena** – adres URL, z którego Licencjobiorca korzysta z Oprogramowania; pierwsza domena użyta po Instalacji zostaje automatycznie przypisana do Klucza licencyjnego.
-- **Instalacja** – proces uruchomienia Oprogramowania na serwerze lub środowisku lokalnym Licencjobiorcy zgodnie z dostarczoną dokumentacją.
+RedirectCMS v2.0 · Wersja dokumentu: 08.03.2026 r.
 
-## § 2. Przedmiot i zakres licencji
+Umowa Licencyjna Użytkownika Końcowego regulująca zasady korzystania
+z Oprogramowania RedirectCMS nabytego za pośrednictwem sklepu internetowego.
 
-Licencjodawca udziela Licencjobiorcy niewyłącznej, nieprzenaszalnej, ograniczonej licencji na korzystanie z Oprogramowania na warunkach niniejszej Umowy, na czas nieokreślony (o ile licencja nie zostanie wcześniej rozwiązana zgodnie z § 10).
+Przed zainstalowaniem lub uruchomieniem Oprogramowania należy uważnie
+przeczytać niniejszą Umowę. Zainstalowanie, skopiowanie lub inne użycie
+Oprogramowania oznacza akceptację wszystkich jej postanowień.
 
-Licencja jest jednorazowa i obejmuje jedno Oprogramowanie działające pod jedną Domeną.
+------------------------------------------------------------------------
+
+§ 1. DEFINICJE
+
+- Oprogramowanie – aplikacja webowa RedirectCMS (wraz z kodem źródłowym PHP,
+  skryptami SQL, plikami szablonów, dokumentacją i innymi plikami dostarczonymi
+  w ramach jednorazowej płatności), umożliwiająca zarządzanie przekierowaniami
+  URL, stronami i kampaniami marketingowymi, przeznaczona do samodzielnej
+  instalacji na serwerze Licencjobiorcy.
+
+- Licencjodawca / Sprzedawca – Krzysztof Janiczek, ul. Jana Pawła II 8/8,
+  59-700 Bolesławiec; kontakt przez formularz kontaktowy.
+
+- Licencjobiorca – osoba fizyczna lub prawna, która nabyła Oprogramowanie
+  i zaakceptowała niniejszą Umowę.
+
+- Konsument – Licencjobiorca będący osobą fizyczną nabywającą Oprogramowanie
+  w celach niezwiązanych bezpośrednio z jej działalnością gospodarczą lub
+  zawodową (art. 22(1) Kodeksu cywilnego).
+
+- PNPF – Przedsiębiorca na Prawach Konsumenta: osoba fizyczna prowadząca
+  działalność gospodarczą, zawierająca umowę nieposiadającą dla niej charakteru
+  zawodowego (art. 38a Ustawy o prawach konsumenta).
+
+- Klucz licencyjny – unikalny ciąg znaków przypisany do Licencjobiorcy,
+  dołączony do pakietu Oprogramowania, służący do weryfikacji ważności licencji
+  i powiązania jej z domeną Licencjobiorcy.
+
+- Domena – adres URL, z którego Licencjobiorca korzysta z Oprogramowania;
+  pierwsza domena użyta po Instalacji zostaje automatycznie przypisana
+  do Klucza licencyjnego.
+
+- Instalacja – proces uruchomienia Oprogramowania na serwerze lub środowisku
+  lokalnym Licencjobiorcy zgodnie z dostarczoną dokumentacją.
+
+
+§ 2. PRZEDMIOT I ZAKRES LICENCJI
+
+Licencjodawca udziela Licencjobiorcy niewyłącznej, nieprzenaszalnej,
+ograniczonej licencji na korzystanie z Oprogramowania na warunkach niniejszej
+Umowy, na czas nieokreślony (o ile licencja nie zostanie wcześniej rozwiązana
+zgodnie z § 10).
+
+Licencja jest jednorazowa i obejmuje jedno Oprogramowanie działające
+pod jedną Domeną.
 
 W ramach udzielonej licencji Licencjobiorca ma prawo do:
 - instalacji i uruchamiania Oprogramowania na własnym serwerze;
-- korzystania z Oprogramowania dla własnych potrzeb lub na potrzeby podmiotu, na rzecz którego działa;
+- korzystania z Oprogramowania dla własnych potrzeb lub na potrzeby podmiotu,
+  na rzecz którego działa;
 - tworzenia kopii zapasowych Oprogramowania do celów archiwizacyjnych;
 - wprowadzania modyfikacji wyłącznie na użytek własny, z zastrzeżeniem § 8.
 
 Licencja nie obejmuje prawa do:
-- sprzedaży, odsprzedaży, sublicencjonowania lub innego odpłatnego udostępniania Oprogramowania osobom trzecim;
-- udostępniania Oprogramowania jako usługi (SaaS) bez odrębnej umowy z Licencjodawcą;
-- korzystania z Oprogramowania pod więcej niż jedną Domeną bez nabycia dodatkowych licencji;
-- usuwania lub modyfikowania oznaczeń praw autorskich zawartych w Oprogramowaniu.
+- sprzedaży, odsprzedaży, sublicencjonowania lub innego odpłatnego
+  udostępniania Oprogramowania osobom trzecim;
+- udostępniania Oprogramowania jako usługi (SaaS) bez odrębnej umowy
+  z Licencjodawcą;
+- korzystania z Oprogramowania pod więcej niż jedną Domeną bez nabycia
+  dodatkowych licencji;
+- usuwania lub modyfikowania oznaczeń praw autorskich zawartych
+  w Oprogramowaniu.
 
-## § 3. Instalacja i wymagania techniczne
 
-Licencjobiorca instaluje Oprogramowanie samodzielnie na własnym serwerze lub środowisku hostingowym. Sprzedawca nie świadczy usług hostingu, instalacji ani administracji serwerem.
+§ 3. INSTALACJA I WYMAGANIA TECHNICZNE
+
+Licencjobiorca instaluje Oprogramowanie samodzielnie na własnym serwerze
+lub środowisku hostingowym. Sprzedawca nie świadczy usług hostingu, instalacji
+ani administracji serwerem.
 
 Minimalne wymagania techniczne:
-- PHP 8.1 lub nowszy z rozszerzeniami: PDO, PDO_MySQL, mbstring, zip, gd, openssl, session;
+- PHP 8.1 lub nowszy z rozszerzeniami: PDO, PDO_MySQL, mbstring, zip, gd,
+  openssl, session;
 - MySQL 5.7+ lub MariaDB 10.3+;
-- uprawnienia do zapisu w katalogach: `uploads/`, `App/config/`;
+- uprawnienia do zapisu w katalogach: uploads/, App/config/;
 - połączenie HTTPS (zalecane ze względów bezpieczeństwa).
 
-Szczegółowe wymagania oraz skrypt weryfikacyjny dostępne są w dokumentacji dołączonej do Oprogramowania.
+Szczegółowe wymagania oraz skrypt weryfikacyjny dostępne są w dokumentacji
+dołączonej do Oprogramowania.
 
-Licencjobiorca ponosi wyłączną odpowiedzialność za konfigurację i utrzymanie serwera, bezpieczeństwo środowiska hostingowego oraz tworzenie regularnych kopii zapasowych danych.
+Licencjobiorca ponosi wyłączną odpowiedzialność za konfigurację i utrzymanie
+serwera, bezpieczeństwo środowiska hostingowego oraz tworzenie regularnych
+kopii zapasowych danych.
 
-Sprzedawca nie ponosi odpowiedzialności za problemy wynikające z niespełnienia wymagań technicznych lub nieprawidłowej konfiguracji środowiska.
+Sprzedawca nie ponosi odpowiedzialności za problemy wynikające z niespełnienia
+wymagań technicznych lub nieprawidłowej konfiguracji środowiska.
 
-## § 4. Wsparcie techniczne i aktualizacje
 
-Zakup Oprogramowania obejmuje bezpłatne wsparcie techniczne i dostęp do aktualizacji przez 6 miesięcy od daty zakupu.
+§ 4. WSPARCIE TECHNICZNE I AKTUALIZACJE
 
-Uprawnienie do bezpłatnego wsparcia jest weryfikowane na podstawie adresu e-mail użytego podczas zakupu.
+Zakup Oprogramowania obejmuje bezpłatne wsparcie techniczne i dostęp do
+aktualizacji przez 6 miesięcy od daty zakupu.
 
-Sprzedawca oferuje wsparcie techniczne na zasadzie najlepszych starań (ang. best effort):
+Uprawnienie do bezpłatnego wsparcia jest weryfikowane na podstawie adresu
+e-mail użytego podczas zakupu.
+
+Sprzedawca oferuje wsparcie techniczne na zasadzie najlepszych starań
+(ang. best effort):
 - zgłoszenia przyjmowane są przez formularz wsparcia;
 - orientacyjny czas odpowiedzi: 2 dni robocze;
-- czas odpowiedzi nie jest gwarantowany i nie stanowi wiążącego zobowiązania umownego.
+- czas odpowiedzi nie jest gwarantowany i nie stanowi wiążącego
+  zobowiązania umownego.
 
-Po upływie okresu bezpłatnego wsparcia Licencjobiorca może nadal kontaktować się przez formularz kontaktowy, a warunki dalszej pomocy ustalane są indywidualnie.
+Po upływie okresu bezpłatnego wsparcia Licencjobiorca może nadal kontaktować
+się przez formularz kontaktowy, a warunki dalszej pomocy ustalane są
+indywidualnie.
 
-Sprzedawca nie jest zobowiązany do udostępniania aktualizacji w żadnym określonym terminie ani do zachowania kompatybilności wstecznej pomiędzy wersjami.
+Sprzedawca nie jest zobowiązany do udostępniania aktualizacji w żadnym
+określonym terminie ani do zachowania kompatybilności wstecznej pomiędzy
+wersjami.
 
-## § 5. Klucz licencyjny i weryfikacja
 
-Do pakietu Oprogramowania dołączony jest unikalny Klucz licencyjny przypisany do Licencjobiorcy.
+§ 5. KLUCZ LICENCYJNY I WERYFIKACJA
 
-Przy pierwszym uruchomieniu Oprogramowanie automatycznie wiąże Klucz licencyjny z Domeną, z której odbywa się pierwsze żądanie. Zmiana Domeny wymaga kontaktu ze Sprzedawcą.
+Do pakietu Oprogramowania dołączony jest unikalny Klucz licencyjny
+przypisany do Licencjobiorcy.
 
-Oprogramowanie może cyklicznie weryfikować ważność Klucza licencyjnego poprzez połączenie z serwerem Sprzedawcy. Szczegółowy opis mechanizmu zawarty jest w dokumentacji.
+Przy pierwszym uruchomieniu Oprogramowanie automatycznie wiąże Klucz
+licencyjny z Domeną, z której odbywa się pierwsze żądanie. Zmiana Domeny
+wymaga kontaktu ze Sprzedawcą.
 
-W przypadku niepowodzenia weryfikacji Klucza licencyjnego Oprogramowanie przechodzi przez kolejne stany:
-- **silent** (0–24 h od ostatniej udanej weryfikacji) — Oprogramowanie działa normalnie, brak widocznych zmian;
-- **warning** (24–48 h) — w panelu administracyjnym wyświetlany jest baner ostrzegawczy informujący o problemie z licencją;
-- **blocked** (powyżej 48 h) — blokada operacji tworzenia i edycji przekierowań oraz możliwości logowania do panelu; dane nie są usuwane.
+Oprogramowanie może cyklicznie weryfikować ważność Klucza licencyjnego
+poprzez połączenie z serwerem Sprzedawcy. Szczegółowy opis mechanizmu
+zawarty jest w dokumentacji.
 
-Niedostępność serwera weryfikacyjnego (timeout połączenia) nie uruchamia powyższego licznika — jedynie brak ważnego Klucza lub jego unieważnienie powoduje przejście do stanu warning / blocked.
+W przypadku niepowodzenia weryfikacji Klucza licencyjnego Oprogramowanie
+przechodzi przez kolejne stany:
 
-Licencjobiorca zobowiązuje się do nieudostępniania Klucza licencyjnego osobom trzecim oraz niezwłocznego powiadomienia Sprzedawcy w przypadku podejrzenia jego nieuprawnionego użycia.
+  silent  (0-24 h od ostatniej udanej weryfikacji)
+          Oprogramowanie działa normalnie, brak widocznych zmian.
 
-## § 6. Odpowiedzialność
+  warning (24-48 h)
+          W panelu administracyjnym wyświetlany jest baner ostrzegawczy
+          informujący o problemie z licencją.
 
-Poniższe wyłączenia i ograniczenia odpowiedzialności nie mają zastosowania wobec Konsumentów ani PNPF w zakresie, w jakim naruszałyby przepisy Ustawy o prawach konsumenta lub Kodeksu cywilnego. Uprawnienia ustawowe Konsumenta i PNPF pozostają nienaruszone.
+  blocked (powyżej 48 h)
+          Blokada operacji tworzenia i edycji przekierowań oraz możliwości
+          logowania do panelu; dane nie są usuwane.
 
-Oprogramowanie dostarczane jest „w stanie, w jakim się znajduje" (ang. as is), bez jakichkolwiek gwarancji — jawnych ani dorozumianych, w szczególności gwarancji przydatności do określonego celu lub nienaruszania praw osób trzecich — w zakresie dozwolonym przez bezwzględnie obowiązujące przepisy prawa.
+Niedostępność serwera weryfikacyjnego (timeout połączenia) nie uruchamia
+powyższego licznika — jedynie brak ważnego Klucza lub jego unieważnienie
+powoduje przejście do stanu warning / blocked.
 
-Sprzedawca nie gwarantuje, że Oprogramowanie będzie działać bez błędów, przerw ani luk bezpieczeństwa. Licencjobiorca przyjmuje do wiadomości, że żadne oprogramowanie nie jest wolne od błędów.
+Licencjobiorca zobowiązuje się do nieudostępniania Klucza licencyjnego
+osobom trzecim oraz niezwłocznego powiadomienia Sprzedawcy w przypadku
+podejrzenia jego nieuprawnionego użycia.
 
-Odpowiedzialność Sprzedawcy wobec Licencjobiorcy niebędącego Konsumentem ani PNPF jest ograniczona do wysokości wynagrodzenia faktycznie uiszczonego przez Licencjobiorcę tytułem nabycia licencji, niezależnie od podstawy prawnej roszczenia.
 
-Sprzedawca nie ponosi odpowiedzialności za: skutki nieprawidłowej instalacji lub konfiguracji; utratę danych wynikającą z błędów środowiska hostingowego; szkody wynikłe z modyfikacji Oprogramowania przez Licencjobiorcę lub osoby trzecie; szkody pośrednie ani utratę zysków — w stosunku do Licencjobiorców niebędących Konsumentami ani PNPF.
+§ 6. ODPOWIEDZIALNOŚĆ
 
-Żadne z postanowień niniejszej Umowy nie ogranicza ani nie wyłącza odpowiedzialności Sprzedawcy za szkody wyrządzone umyślnie, z rażącego niedbalstwa ani w przypadkach, gdy wyłączenie odpowiedzialności jest niedopuszczalne z mocy prawa.
+Poniższe wyłączenia i ograniczenia odpowiedzialności nie mają zastosowania
+wobec Konsumentów ani PNPF w zakresie, w jakim naruszałyby przepisy Ustawy
+o prawach konsumenta lub Kodeksu cywilnego. Uprawnienia ustawowe Konsumenta
+i PNPF pozostają nienaruszone.
 
-## § 7. Prawa własności intelektualnej
+Oprogramowanie dostarczane jest "w stanie, w jakim się znajduje" (ang. as is),
+bez jakichkolwiek gwarancji — jawnych ani dorozumianych, w szczególności
+gwarancji przydatności do określonego celu lub nienaruszania praw osób
+trzecich — w zakresie dozwolonym przez bezwzględnie obowiązujące przepisy
+prawa.
 
-Oprogramowanie RedirectCMS oraz wszelkie jego elementy (kod źródłowy, grafika, dokumentacja, szablony, tłumaczenia) stanowią własność Sprzedawcy i są chronione przepisami Ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz.U. 1994 nr 24 poz. 83 ze zm.) oraz Dyrektywą 2009/24/WE o prawnej ochronie programów komputerowych.
+Sprzedawca nie gwarantuje, że Oprogramowanie będzie działać bez błędów,
+przerw ani luk bezpieczeństwa. Licencjobiorca przyjmuje do wiadomości,
+że żadne oprogramowanie nie jest wolne od błędów.
 
-Niniejsza Umowa nie przenosi na Licencjobiorcę żadnych praw własności intelektualnej do Oprogramowania — udzielana jest wyłącznie licencja na warunkach opisanych w § 2.
+Odpowiedzialność Sprzedawcy wobec Licencjobiorcy niebędącego Konsumentem
+ani PNPF jest ograniczona do wysokości wynagrodzenia faktycznie uiszczonego
+przez Licencjobiorcę tytułem nabycia licencji, niezależnie od podstawy
+prawnej roszczenia.
 
-Wszelkie oznaczenia handlowe, znaki towarowe i logo RedirectCMS są własnością Sprzedawcy. Licencjobiorca nie jest uprawniony do ich używania bez uprzedniej pisemnej zgody Sprzedawcy.
+Sprzedawca nie ponosi odpowiedzialności za:
+- skutki nieprawidłowej instalacji lub konfiguracji;
+- utratę danych wynikającą z błędów środowiska hostingowego;
+- szkody wynikłe z modyfikacji Oprogramowania przez Licencjobiorcę lub osoby
+  trzecie;
+- szkody pośrednie ani utratę zysków (w stosunku do Licencjobiorców
+  niebędących Konsumentami ani PNPF).
 
-Licencjobiorca zachowuje pełne prawa do własnych danych, treści i materiałów wprowadzonych do Oprogramowania.
+Żadne z postanowień niniejszej Umowy nie ogranicza ani nie wyłącza
+odpowiedzialności Sprzedawcy za szkody wyrządzone umyślnie, z rażącego
+niedbalstwa ani w przypadkach, gdy wyłączenie odpowiedzialności jest
+niedopuszczalne z mocy prawa.
 
-## § 8. Modyfikacje i dekompilacja
 
-Licencjobiorca ma prawo do modyfikowania kodu źródłowego Oprogramowania wyłącznie dla własnego użytku, bez prawa do rozpowszechniania zmodyfikowanej wersji.
+§ 7. PRAWA WŁASNOŚCI INTELEKTUALNEJ
 
-W zakresie dekompilacji, dezasemblacji i analizy kodu zastosowanie mają przepisy art. 75 Ustawy o prawie autorskim i prawach pokrewnych oraz art. 6 Dyrektywy 2009/24/WE. Licencjobiorca może dekompilować Oprogramowanie wyłącznie w zakresie niezbędnym do osiągnięcia interoperacyjności z niezależnie stworzonym oprogramowaniem, po uprzednim wyczerpaniu innych dostępnych środków.
+Oprogramowanie RedirectCMS oraz wszelkie jego elementy (kod źródłowy, grafika,
+dokumentacja, szablony, tłumaczenia) stanowią własność Sprzedawcy i są
+chronione przepisami Ustawy z dnia 4 lutego 1994 r. o prawie autorskim
+i prawach pokrewnych (Dz.U. 1994 nr 24 poz. 83 ze zm.) oraz Dyrektywą
+2009/24/WE o prawnej ochronie programów komputerowych.
 
-Usunięcie lub obejście mechanizmu weryfikacji Klucza licencyjnego w celu używania Oprogramowania bez ważnej licencji stanowi naruszenie Umowy i przepisów prawa.
+Niniejsza Umowa nie przenosi na Licencjobiorcę żadnych praw własności
+intelektualnej do Oprogramowania — udzielana jest wyłącznie licencja
+na warunkach opisanych w § 2.
 
-Modyfikacje Oprogramowania nie powodują utraty uprawnień przysługujących Konsumentowi z tytułu rękojmi, chyba że modyfikacja doprowadziła bezpośrednio do zgłoszonej wady.
+Wszelkie oznaczenia handlowe, znaki towarowe i logo RedirectCMS są własnością
+Sprzedawcy. Licencjobiorca nie jest uprawniony do ich używania bez uprzedniej
+pisemnej zgody Sprzedawcy.
 
-## § 9. Prawo odstąpienia i zwrot
+Licencjobiorca zachowuje pełne prawa do własnych danych, treści i materiałów
+wprowadzonych do Oprogramowania.
 
-Konsumentowi oraz PNPF przysługuje prawo do odstąpienia od umowy w terminie 14 dni od dnia jej zawarcia, bez podawania przyczyny — na zasadach określonych w art. 27 i nast. Ustawy z dnia 30 maja 2014 r. o prawach konsumenta.
 
-Zgodnie z art. 38 pkt 1 Ustawy o prawach konsumenta prawo do odstąpienia nie przysługuje w odniesieniu do umowy o dostarczanie treści cyfrowych niedostarczanych na nośniku materialnym, jeżeli spełnianie świadczenia rozpoczęło się za wyraźną zgodą Konsumenta przed upływem terminu do odstąpienia i po poinformowaniu go o utracie tego prawa. Licencjobiorca wyraził taką zgodę podczas zakupu. Pobranie pliku Oprogramowania lub wygenerowanie linku pobrania jest równoznaczne z wyrażeniem zgody na utratę prawa odstąpienia od umowy; prawo to wygasa z chwilą wygenerowania linku pobrania.
+§ 8. MODYFIKACJE I DEKOMPILACJA
 
-Jeżeli prawo do odstąpienia nie zostało utracone, oświadczenie należy złożyć przez formularz kontaktowy lub pisemnie na adres Sprzedawcy. Zwrot nastąpi tą samą metodą płatności, nie później niż w terminie 14 dni od otrzymania skutecznego oświadczenia.
+Licencjobiorca ma prawo do modyfikowania kodu źródłowego Oprogramowania
+wyłącznie dla własnego użytku, bez prawa do rozpowszechniania zmodyfikowanej
+wersji.
 
-Konsumentowi i PNPF przysługuje prawo do reklamacji z tytułu niezgodności Oprogramowania z umową na zasadach art. 43a–43g Ustawy o prawach konsumenta (implementacja Dyrektywy 2019/770/UE).
+W zakresie dekompilacji, dezasemblacji i analizy kodu zastosowanie mają
+przepisy art. 75 Ustawy o prawie autorskim i prawach pokrewnych oraz art. 6
+Dyrektywy 2009/24/WE. Licencjobiorca może dekompilować Oprogramowanie
+wyłącznie w zakresie niezbędnym do osiągnięcia interoperacyjności
+z niezależnie stworzonym oprogramowaniem, po uprzednim wyczerpaniu innych
+dostępnych środków.
 
-## § 10. Czas trwania i rozwiązanie Umowy
+Usunięcie lub obejście mechanizmu weryfikacji Klucza licencyjnego w celu
+używania Oprogramowania bez ważnej licencji stanowi naruszenie Umowy
+i przepisów prawa.
+
+Modyfikacje Oprogramowania nie powodują utraty uprawnień przysługujących
+Konsumentowi z tytułu rękojmi, chyba że modyfikacja doprowadziła bezpośrednio
+do zgłoszonej wady.
+
+
+§ 9. PRAWO ODSTĄPIENIA I ZWROT
+
+Konsumentowi oraz PNPF przysługuje prawo do odstąpienia od umowy w terminie
+14 dni od dnia jej zawarcia, bez podawania przyczyny — na zasadach określonych
+w art. 27 i nast. Ustawy z dnia 30 maja 2014 r. o prawach konsumenta.
+
+Zgodnie z art. 38 pkt 1 Ustawy o prawach konsumenta prawo do odstąpienia
+nie przysługuje w odniesieniu do umowy o dostarczanie treści cyfrowych
+niedostarczanych na nośniku materialnym, jeżeli spełnianie świadczenia
+rozpoczęło się za wyraźną zgodą Konsumenta przed upływem terminu do
+odstąpienia i po poinformowaniu go o utracie tego prawa. Licencjobiorca
+wyraził taką zgodę podczas zakupu. Pobranie pliku Oprogramowania lub
+wygenerowanie linku pobrania jest równoznaczne z wyrażeniem zgody na utratę
+prawa odstąpienia od umowy; prawo to wygasa z chwilą wygenerowania linku
+pobrania.
+
+Jeżeli prawo do odstąpienia nie zostało utracone, oświadczenie należy złożyć
+przez formularz kontaktowy lub pisemnie na adres Sprzedawcy. Zwrot nastąpi
+tą samą metodą płatności, nie później niż w terminie 14 dni od otrzymania
+skutecznego oświadczenia.
+
+Konsumentowi i PNPF przysługuje prawo do reklamacji z tytułu niezgodności
+Oprogramowania z umową na zasadach art. 43a-43g Ustawy o prawach konsumenta
+(implementacja Dyrektywy 2019/770/UE).
+
+
+§ 10. CZAS TRWANIA I ROZWIĄZANIE UMOWY
 
 Umowa zawierana jest na czas nieokreślony z dniem nabycia licencji.
 
-Sprzedawca może rozwiązać Umowę ze skutkiem natychmiastowym w przypadku rażącego naruszenia jej postanowień przez Licencjobiorcę, w szczególności: udostępnienia Oprogramowania lub Klucza licencyjnego osobom trzecim, próby obejścia zabezpieczeń w celu używania Oprogramowania bez ważnej licencji, lub używania Oprogramowania pod więcej niż jedną Domeną bez nabycia dodatkowych licencji.
+Sprzedawca może rozwiązać Umowę ze skutkiem natychmiastowym w przypadku
+rażącego naruszenia jej postanowień przez Licencjobiorcę, w szczególności:
+udostępnienia Oprogramowania lub Klucza licencyjnego osobom trzecim, próby
+obejścia zabezpieczeń w celu używania Oprogramowania bez ważnej licencji,
+lub używania Oprogramowania pod więcej niż jedną Domeną bez nabycia
+dodatkowych licencji.
 
-Po rozwiązaniu Umowy Licencjobiorca jest zobowiązany do zaprzestania korzystania z Oprogramowania i usunięcia wszystkich jego kopii ze swoich systemów.
+Po rozwiązaniu Umowy Licencjobiorca jest zobowiązany do zaprzestania
+korzystania z Oprogramowania i usunięcia wszystkich jego kopii ze swoich
+systemów.
 
-## § 11. Postanowienia końcowe
 
-Niniejsza Umowa podlega prawu polskiemu. W sprawach nieuregulowanych zastosowanie mają przepisy Kodeksu cywilnego, Ustawy o prawie autorskim i prawach pokrewnych oraz Ustawy o prawach konsumenta.
+§ 11. POSTANOWIENIA KOŃCOWE
 
-Wszelkie spory będą rozpatrywane przez sąd właściwy miejscowo zgodnie z przepisami Kodeksu postępowania cywilnego. Dla Konsumentów sądem właściwym może być sąd miejsca zamieszkania Konsumenta.
+Niniejsza Umowa podlega prawu polskiemu. W sprawach nieuregulowanych
+zastosowanie mają przepisy Kodeksu cywilnego, Ustawy o prawie autorskim
+i prawach pokrewnych oraz Ustawy o prawach konsumenta.
 
-Konsument ma prawo do skorzystania z pozasądowych metod rozwiązywania sporów: Platformy ODR (ec.europa.eu/consumers/odr), Inspekcji Handlowej lub Powiatowego Rzecznika Konsumentów.
+Wszelkie spory będą rozpatrywane przez sąd właściwy miejscowo zgodnie
+z przepisami Kodeksu postępowania cywilnego. Dla Konsumentów sądem właściwym
+może być sąd miejsca zamieszkania Konsumenta.
 
-Sprzedawca zastrzega prawo do zmiany niniejszej Umowy. O zmianach Licencjobiorcy zostaną poinformowani z co najmniej 14-dniowym wyprzedzeniem za pośrednictwem strony https://redirectcms.pl lub e-mailem podanym podczas zakupu. Zmiany nie naruszają praw nabytych Licencjobiorcy powstałych przed datą ich wejścia w życie.
+Konsument ma prawo do skorzystania z pozasądowych metod rozwiązywania sporów:
+Platformy ODR (ec.europa.eu/consumers/odr), Inspekcji Handlowej lub
+Powiatowego Rzecznika Konsumentów.
 
-Dane osobowe Licencjobiorcy (imię i nazwisko / nazwa firmy, adres e-mail) przekazane podczas zakupu przetwarzane są przez Sprzedawcę w celu realizacji umowy licencyjnej, w tym weryfikacji Klucza licencyjnego oraz obsługi zgłoszeń wsparcia technicznego. Szczegółowe informacje zawiera Polityka prywatności.
+Sprzedawca zastrzega prawo do zmiany niniejszej Umowy. O zmianach
+Licencjobiorcy zostaną poinformowani z co najmniej 14-dniowym wyprzedzeniem
+za pośrednictwem strony https://redirectcms.pl lub e-mailem podanym podczas
+zakupu. Zmiany nie naruszają praw nabytych Licencjobiorcy powstałych przed
+datą ich wejścia w życie.
 
-Jeśli którekolwiek postanowienie niniejszej Umowy okaże się nieważne lub nieskuteczne, pozostałe postanowienia zachowują moc wiążącą.
+Dane osobowe Licencjobiorcy (imię i nazwisko / nazwa firmy, adres e-mail)
+przekazane podczas zakupu przetwarzane są przez Sprzedawcę w celu realizacji
+umowy licencyjnej, w tym weryfikacji Klucza licencyjnego oraz obsługi zgłoszeń
+wsparcia technicznego. Szczegółowe informacje zawiera Polityka prywatności.
 
----
+Jeśli którekolwiek postanowienie niniejszej Umowy okaże się nieważne lub
+nieskuteczne, pozostałe postanowienia zachowują moc wiążącą.
 
-© 2025–2026 Krzysztof Janiczek · Wszelkie prawa zastrzeżone · https://redirectcms.pl/license
+------------------------------------------------------------------------
+
+(c) 2025-2026 Krzysztof Janiczek. All Rights Reserved.
+https://redirectcms.pl/license
