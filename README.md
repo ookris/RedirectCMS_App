@@ -209,14 +209,26 @@ RedirectCMS/
 
 ## Licencja
 
-RedirectCMS jest udostępniany na licencji **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
+RedirectCMS jest oprogramowaniem komercyjnym objętym **Umową Licencyjną Użytkownika Końcowego (EULA)**.
 
-**Dozwolone:** użytek prywatny, edukacja, organizacje non-profit, modyfikacje, udostępnianie z zachowaniem licencji.
+Kod źródłowy jest publicznie dostępny wyłącznie w celach poglądowych. Pobranie, instalacja lub uruchomienie Oprogramowania wymaga nabycia licencji.
 
-**Zabronione:** użytek komercyjny, generowanie przychodów, świadczenie płatnych usług opartych na RedirectCMS.
+**Dozwolone** (po zakupie licencji):
+- instalacja i uruchamianie na własnym serwerze pod jedną domeną
+- tworzenie kopii zapasowych
+- modyfikacje wyłącznie na własny użytek (bez prawa do dystrybucji)
 
-Pełna treść licencji: [LICENSE](LICENSE) · [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode.pl)
+**Zabronione**:
+- używanie bez ważnego klucza licencyjnego
+- redystrybucja, odsprzedaż, sublicencjonowanie
+- udostępnianie jako SaaS bez odrębnej umowy
+- usuwanie lub obchodzenie mechanizmu weryfikacji licencji
+- używanie pod więcej niż jedną domeną bez dodatkowych licencji
+
+Pełna treść licencji: [LICENSE](LICENSE) · [redirectcms.pl/license](https://redirectcms.pl/license)
+
+Zakup licencji: [redirectcms.pl](https://redirectcms.pl)
 
 ---
 
-© 2025–2026 RedirectCMS · Krzysztof Janiczek
+© 2025–2026 Krzysztof Janiczek · Wszelkie prawa zastrzeżone
