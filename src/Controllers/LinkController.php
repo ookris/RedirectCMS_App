@@ -141,6 +141,9 @@ class LinkController extends BaseController
         ], ';');
 
         // Dane linków
+        // Uwaga: tytuł/opis/kategoria/tagi mogą pochodzić z wcześniejszego importu CSV
+        // z zewnętrznego źródła, dlatego przechodzą przez csvSafe() przy eksporcie —
+        // bez tego formuła wstrzyknięta przy imporcie "wybuchłaby" dopiero tutaj.
         foreach ($links as $link) {
             $tags = $linkRepo->getTagsForLink((int)$link['id']);
             $tagNames = array_map(fn($t) => $t['name'], $tags);
@@ -148,16 +151,16 @@ class LinkController extends BaseController
             fputcsv($output, [
                 $link['id'],
                 $link['slug'],
-                $link['page_title'] ?? '',
-                $link['target_url'],
-                $link['category_name'] ?? '',
-                $link['affiliate_program_name'] ?? '',
+                Utils::csvSafe($link['page_title'] ?? ''),
+                Utils::csvSafe($link['target_url']),
+                Utils::csvSafe($link['category_name'] ?? ''),
+                Utils::csvSafe($link['affiliate_program_name'] ?? ''),
                 $link['delay_seconds'],
                 !empty($link['created_at']) ? date('Y-m-d H:i:s', strtotime($link['created_at'])) : '',
                 $link['publish_at'] ?? '',
                 $link['expires_at'] ?? '',
-                $link['page_description'] ?? '',
-                implode(', ', $tagNames),
+                Utils::csvSafe($link['page_description'] ?? ''),
+                Utils::csvSafe(implode(', ', $tagNames)),
             ], ';');
         }
 
@@ -491,26 +494,15 @@ class LinkController extends BaseController
                     break;
 
                 case 'change_category':
+                    // Aktualizacja częściowa (tylko category_id) — celowo NIE używamy
+                    // wariantu pozycyjnego update(), który wymaga podania wszystkich pól
+                    // i przy braku jednego z nich potrafi po cichu wyzerować inne (np.
+                    // fallback_url, notes).
                     $categoryId = !empty($_POST['bulk_category']) ? (int)$_POST['bulk_category'] : null;
                     foreach ($selectedIds as $id) {
                         try {
-                            $link = $linkRepo->getById($id);
-                            if ($link) {
-                                $linkRepo->update(
-                                    $id,
-                                    $link['slug'],
-                                    $link['target_url'],
-                                    (int)$link['delay_seconds'],
-                                    $link['page_title'],
-                                    $link['page_description'],
-                                    $link['og_image'],
-                                    $categoryId,
-                                    !empty($link['affiliate_program_id']) ? (int)$link['affiliate_program_id'] : null,
-                                    $link['publish_at'],
-                                    $link['expires_at'],
-                                    $link['password_hash'],
-                                    $link['password_hint']
-                                );
+                            if ($linkRepo->getById($id)) {
+                                $linkRepo->update($id, ['category_id' => $categoryId]);
                                 $successCount++;
                             }
                         } catch (\Throwable $e) {
@@ -522,26 +514,12 @@ class LinkController extends BaseController
                     break;
 
                 case 'change_program':
+                    // Jak wyżej — aktualizacja częściowa, tylko affiliate_program_id.
                     $programId = !empty($_POST['bulk_program']) ? (int)$_POST['bulk_program'] : null;
                     foreach ($selectedIds as $id) {
                         try {
-                            $link = $linkRepo->getById($id);
-                            if ($link) {
-                                $linkRepo->update(
-                                    $id,
-                                    $link['slug'],
-                                    $link['target_url'],
-                                    (int)$link['delay_seconds'],
-                                    $link['page_title'],
-                                    $link['page_description'],
-                                    $link['og_image'],
-                                    !empty($link['category_id']) ? (int)$link['category_id'] : null,
-                                    $programId,
-                                    $link['publish_at'],
-                                    $link['expires_at'],
-                                    $link['password_hash'],
-                                    $link['password_hint']
-                                );
+                            if ($linkRepo->getById($id)) {
+                                $linkRepo->update($id, ['affiliate_program_id' => $programId]);
                                 $successCount++;
                             }
                         } catch (\Throwable $e) {
@@ -728,7 +706,7 @@ class LinkController extends BaseController
 
             // URL zapasowy po wygaśnięciu
             $fallbackUrl = trim((string)($_POST['fallback_url'] ?? ''));
-            $fallbackUrl = $fallbackUrl !== '' ? $fallbackUrl : null;
+            $fallbackUrl = $fallbackUrl !== '' ? Utils::sanitizeUrl($fallbackUrl) : null;
 
             $id = $links->create($slug, $target, $delay, $pageTitle, $pageDescription, null, $categoryId, $affiliateProgramId, $publishAt, $expiresAt, $passwordHash, $passwordHint, $notes, $status, $fallbackUrl);
 
@@ -1012,7 +990,7 @@ class LinkController extends BaseController
 
             // URL zapasowy po wygaśnięciu
             $fallbackUrl = trim((string)($_POST['fallback_url'] ?? ''));
-            $fallbackUrl = $fallbackUrl !== '' ? $fallbackUrl : null;
+            $fallbackUrl = $fallbackUrl !== '' ? Utils::sanitizeUrl($fallbackUrl) : null;
 
             $repo->update($id, [
                 'slug' => $slug,

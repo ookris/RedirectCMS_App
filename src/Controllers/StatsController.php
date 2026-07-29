@@ -246,25 +246,27 @@ class StatsController extends BaseController
             case 'daily':
                 fputcsv($out, ['Data', 'Kliknięcia'], ',', '"', '\\');
                 foreach ($stats['daily_chart'] as $row) {
-                    fputcsv($out, [$row['date'], $row['count']], ',', '"', '\\');
+                    fputcsv($out, [Utils::csvSafe($row['date']), $row['count']], ',', '"', '\\');
                 }
                 break;
             case 'referer':
+                // Referer pochodzi z nagłówka HTTP kontrolowanego przez odwiedzającego —
+                // bez csvSafe() mógłby zawierać formułę wykonywaną po otwarciu w Excelu.
                 fputcsv($out, ['Źródło', 'Kliknięcia'], ',', '"', '\\');
                 foreach ($stats['by_referer'] as $row) {
-                    fputcsv($out, [$row['referer'], $row['count']], ',', '"', '\\');
+                    fputcsv($out, [Utils::csvSafe($row['referer']), $row['count']], ',', '"', '\\');
                 }
                 break;
             case 'device':
                 fputcsv($out, ['Urządzenie', 'Kliknięcia'], ',', '"', '\\');
                 foreach ($stats['by_device'] as $row) {
-                    fputcsv($out, [$row['device_type'], $row['count']], ',', '"', '\\');
+                    fputcsv($out, [Utils::csvSafe($row['device_type']), $row['count']], ',', '"', '\\');
                 }
                 break;
             case 'browser':
                 fputcsv($out, ['Przeglądarka', 'Kliknięcia'], ',', '"', '\\');
                 foreach ($stats['by_browser'] as $row) {
-                    fputcsv($out, [$row['browser'], $row['count']], ',', '"', '\\');
+                    fputcsv($out, [Utils::csvSafe($row['browser']), $row['count']], ',', '"', '\\');
                 }
                 break;
             case 'hourly':

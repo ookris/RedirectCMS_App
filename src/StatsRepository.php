@@ -719,7 +719,7 @@ class StatsRepository
         // Wpisy w logu audytu
         $auditLogCount = 0;
         try {
-            $auditLogCount = $this->pdo->query('SELECT COUNT(*) FROM audit_log')->fetchColumn();
+            $auditLogCount = $this->pdo->query('SELECT COUNT(*) FROM audit_logs')->fetchColumn();
         } catch (Throwable $e) {
             // Ignoruj jeśli tabela nie istnieje
         }

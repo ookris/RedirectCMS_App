@@ -104,14 +104,24 @@ class CampaignRepository
      */
     public function setLinksForCampaign(int $campaignId, array $linkIds): void
     {
-        $stmt = $this->pdo->prepare('DELETE FROM campaign_links WHERE campaign_id = :cid');
-        $stmt->execute([':cid' => $campaignId]);
+        $this->pdo->beginTransaction();
+        try {
+            $stmt = $this->pdo->prepare('DELETE FROM campaign_links WHERE campaign_id = :cid');
+            $stmt->execute([':cid' => $campaignId]);
 
-        if (!empty($linkIds)) {
-            $insert = $this->pdo->prepare('INSERT INTO campaign_links (campaign_id, link_id) VALUES (:cid, :lid)');
-            foreach ($linkIds as $linkId) {
-                $insert->execute([':cid' => $campaignId, ':lid' => (int)$linkId]);
+            if (!empty($linkIds)) {
+                $insert = $this->pdo->prepare('INSERT INTO campaign_links (campaign_id, link_id) VALUES (:cid, :lid)');
+                foreach ($linkIds as $linkId) {
+                    $insert->execute([':cid' => $campaignId, ':lid' => (int)$linkId]);
+                }
             }
+
+            $this->pdo->commit();
+        } catch (\Throwable $e) {
+            if ($this->pdo->inTransaction()) {
+                $this->pdo->rollBack();
+            }
+            throw $e;
         }
     }
 

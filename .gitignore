@@ -1,0 +1,7 @@
+/vendor/
+composer.lock
+/config/config.php
+/storage/logs/*.log
+/storage/locks/*.lock
+/storage/cache/qr/
+.DS_Store

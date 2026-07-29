@@ -294,13 +294,68 @@ class BackupService
     }
 
     /**
+     * Split a SQL dump into individual statements, respecting quoted string
+     * literals. A naive split on ";\n" breaks if a text column contains that
+     * exact byte sequence (e.g. "Price: 10;\nFree shipping") — the INSERT would
+     * be cut mid-statement and the whole restore would fail on ordinary user
+     * content, not just malicious input.
+     */
+    private function splitSqlStatements(string $sql): array
+    {
+        $statements = [];
+        $current = '';
+        $len = strlen($sql);
+        $inSingle = false;
+        $inDouble = false;
+        $inBacktick = false;
+
+        for ($i = 0; $i < $len; $i++) {
+            $ch = $sql[$i];
+            $current .= $ch;
+
+            if ($inSingle || $inDouble) {
+                if ($ch === '\\' && $i + 1 < $len) {
+                    $current .= $sql[++$i];
+                    continue;
+                }
+                if (($inSingle && $ch === "'") || ($inDouble && $ch === '"')) {
+                    $inSingle = false;
+                    $inDouble = false;
+                }
+                continue;
+            }
+            if ($inBacktick) {
+                if ($ch === '`') {
+                    $inBacktick = false;
+                }
+                continue;
+            }
+
+            if ($ch === "'") { $inSingle = true; continue; }
+            if ($ch === '"') { $inDouble = true; continue; }
+            if ($ch === '`') { $inBacktick = true; continue; }
+
+            if ($ch === ';') {
+                $statements[] = $current;
+                $current = '';
+            }
+        }
+
+        if (trim($current) !== '') {
+            $statements[] = $current;
+        }
+
+        return $statements;
+    }
+
+    /**
      * Import SQL statements from backup.
      */
     private function importSql(string $sql): void
     {
-        // Remove comments and split by semicolons
+        // Remove comments and split into statements
         $sql = preg_replace('/^--.*$/m', '', $sql);
-        $statements = preg_split('/;\s*\n/', $sql);
+        $statements = $this->splitSqlStatements($sql);
 
         $this->pdo->beginTransaction();
         try {
@@ -308,7 +363,8 @@ class BackupService
 
             foreach ($statements as $stmt) {
                 $stmt = trim($stmt);
-                if (empty($stmt) || $stmt === 'SET FOREIGN_KEY_CHECKS = 0' || $stmt === 'SET FOREIGN_KEY_CHECKS = 1') {
+                $stmtNoSemicolon = rtrim($stmt, "; \t\n\r");
+                if ($stmt === '' || $stmtNoSemicolon === 'SET FOREIGN_KEY_CHECKS = 0' || $stmtNoSemicolon === 'SET FOREIGN_KEY_CHECKS = 1') {
                     continue;
                 }
                 $this->pdo->exec($stmt);

@@ -343,6 +343,16 @@ class AuthController extends BaseController
             return;
         }
 
+        // Osobny licznik prób niż logowanie hasłem (limiter loginu jest resetowany
+        // zaraz po podaniu poprawnego hasła, więc bez tego nic by tu nie ograniczało
+        // liczby prób odgadnięcia kodu 2FA).
+        $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+        $rateLimitKey = '2fa:' . $ip;
+        if ($error = $this->rateLimiter()->check($rateLimitKey)) {
+            $this->view('two_factor_verify', ['error' => $error]);
+            return;
+        }
+
         $code = trim((string)($_POST['code'] ?? ''));
         $repo = new SettingsRepository($this->pdo);
         $secret = $repo->get('two_factor_secret', '');
@@ -370,10 +380,12 @@ class AuthController extends BaseController
         }
 
         if (!$verified) {
+            $this->rateLimiter()->record($rateLimitKey);
             $this->view('two_factor_verify', ['error' => 'Nieprawidłowy kod. Spróbuj ponownie.']);
             return;
         }
 
+        $this->rateLimiter()->reset($rateLimitKey);
         unset($_SESSION['2fa_pending']);
         $_SESSION['admin_logged'] = true;
 

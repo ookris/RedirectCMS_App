@@ -1,6 +1,6 @@
 <?php
   $pageTitle = 'Wygląd — RedirectCMS';
-  $extraHead = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />';
+  $extraHead = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@0.24.0/dist/coloris.min.css" integrity="sha384-DY3umZptOgjUNshBFbvu1+3RVFPoD1/CgGcc1yyJ77/aFOJ7jtN4BORnz/D/xF0n" crossorigin="anonymous" />';
   require __DIR__ . '/static/head.php';
 ?>
 <body class="bg-light">
@@ -390,7 +390,7 @@
   </div>
 
   <?php require __DIR__ . '/static/footer.php'; ?>
-  <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@0.24.0/dist/coloris.min.js" integrity="sha384-yDesKgAbsjDgUfncW6vcNZZStMvWz8Rr34fz0e+xp/v0LGdpCWTYLBJA6VbTZjuO" crossorigin="anonymous"></script>
   <script>
   function toggleSliderDays() {
     const type = document.getElementById('slider_type');

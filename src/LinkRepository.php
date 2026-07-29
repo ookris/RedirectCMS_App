@@ -497,7 +497,8 @@ class LinkRepository
         ?string $expiresAt = null,
         ?string $passwordHash = null,
         ?string $passwordHint = null,
-        ?string $notes = null
+        ?string $notes = null,
+        ?string $fallbackUrl = null
     ): void
     {
         // Support both array and individual parameters
@@ -545,11 +546,11 @@ class LinkRepository
                 $fields[] = 'og_image = :img';
                 $params[':img'] = $ogImage;
             }
-            if (isset($data['category_id'])) {
+            if (array_key_exists('category_id', $data)) {
                 $fields[] = 'category_id = :cid';
                 $params[':cid'] = $categoryId;
             }
-            if (isset($data['affiliate_program_id'])) {
+            if (array_key_exists('affiliate_program_id', $data)) {
                 $fields[] = 'affiliate_program_id = :apid';
                 $params[':apid'] = $affiliateProgramId;
             }

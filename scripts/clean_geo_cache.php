@@ -7,6 +7,12 @@ declare(strict_types=1);
 //   php scripts/clean_geo_cache.php [days]
 //   php scripts/clean_geo_cache.php --clear-all
 
+// Tylko CLI — ten skrypt czyści dane bez uwierzytelniania, więc nie może być
+// wywoływany przez HTTP (patrz refresh_global_stats_cache.php dla tego samego wzorca).
+if (php_sapi_name() !== 'cli') {
+    exit('Ten skrypt może być uruchomiony tylko z wiersza poleceń.' . PHP_EOL);
+}
+
 require_once __DIR__ . '/../src/Database.php';
 require_once __DIR__ . '/../src/StatsRepository.php';
 require_once __DIR__ . '/../src/Utils.php';

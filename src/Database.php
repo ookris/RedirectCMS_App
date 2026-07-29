@@ -11,7 +11,8 @@ class Database
         'links', 'link_tags', 'link_custom_fields', 'link_images', 'link_stats',
         'link_health_checks', 'categories', 'tags', 'affiliate_programs', 'settings',
         'events', 'audit_logs', 'cron_jobs', 'cron_logs', 'geo_cache', 'global_stats_cache',
-        'notifications', 'campaigns', 'campaign_links', 'login_attempts'
+        'notifications', 'campaigns', 'campaign_links', 'login_attempts',
+        'custom_pages', 'link_reactions'
     ];
 
     public function __construct(array $config)

@@ -118,6 +118,7 @@
                         </td>
                         <td>
                           <div class="link-truncate">
+                            <?php if (Utils::isSafeHttpUrl($link['target_url'])): ?>
                             <a href="<?= htmlspecialchars($link['target_url']) ?>" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
                               <?= htmlspecialchars($link['target_url']) ?>
                               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-up-right ms-1" viewBox="0 0 16 16">
@@ -125,6 +126,9 @@
                                 <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
                               </svg>
                             </a>
+                            <?php else: ?>
+                            <span class="text-muted" title="Zablokowany adres (nieobsługiwany schemat URL)"><?= htmlspecialchars((string)$link['target_url']) ?></span>
+                            <?php endif; ?>
                           </div>
                         </td>
                         <td>
@@ -240,9 +244,13 @@
                         </td>
                         <td>
                           <div class="link-truncate">
+                            <?php if (Utils::isSafeHttpUrl($link['target_url'])): ?>
                             <a href="<?= htmlspecialchars($link['target_url']) ?>" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
                               <?= htmlspecialchars($link['target_url']) ?>
                             </a>
+                            <?php else: ?>
+                            <span class="text-muted" title="Zablokowany adres (nieobsługiwany schemat URL)"><?= htmlspecialchars((string)$link['target_url']) ?></span>
+                            <?php endif; ?>
                           </div>
                         </td>
                         <td>

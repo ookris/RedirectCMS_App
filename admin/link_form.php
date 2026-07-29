@@ -935,6 +935,15 @@
     // Autouzupełnianie tagów
     const tagsInput = document.getElementById('tags');
     const suggestionsList = document.getElementById('tags-suggestions');
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
     
     tagsInput.addEventListener('input', function(e) {
       const value = e.target.value;
@@ -965,9 +974,10 @@
             suggestionsList.innerHTML = tags
               .filter(tag => !existingTags.includes(tag.name.toLowerCase()))
               .map(tag => {
+                const safeName = escapeHtml(tag.name);
                 const usageInfo = tag.usage_count > 0 ? ` <span class="text-muted">(${tag.usage_count}×)</span>` : '';
-                return `<a href="#" class="list-group-item list-group-item-action" data-tag-name="${tag.name.replace(/"/g, '&quot;')}">
-                  ${tag.name}${usageInfo}
+                return `<a href="#" class="list-group-item list-group-item-action" data-tag-name="${safeName}">
+                  ${safeName}${usageInfo}
                 </a>`;
               })
               .join('');

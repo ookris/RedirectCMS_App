@@ -264,7 +264,7 @@ class LinkHealthCheckRepository
                 OR last_health_check_at < DATE_SUB(NOW(), INTERVAL :hours HOUR)
             )
             AND (last_health_status IS NULL OR last_health_status != 'ignored')
-            ORDER BY last_health_check_at ASC NULLS FIRST
+            ORDER BY (last_health_check_at IS NULL) DESC, last_health_check_at ASC
             LIMIT :limit
         ");
         $stmt->bindValue(':hours', $minHoursSinceLastCheck, PDO::PARAM_INT);

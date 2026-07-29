@@ -61,39 +61,30 @@ class LoginRateLimiter
 
     /**
      * Rejestruje nieudaną próbę logowania dla danego IP.
+     *
+     * Zaimplementowane jako atomowy upsert (bez odczytu do PHP i zapisu z powrotem),
+     * żeby seria równoległych żądań z tego samego IP nie mogła "przemknąć" więcej
+     * prób niż MAX_ATTEMPTS — każda instrukcja SQL działa pod blokadą wiersza MySQL.
      */
     public function record(string $ip): void
     {
         $hash = hash('sha256', $ip);
         $now  = time();
-
-        $stmt = $this->pdo->prepare(
-            'SELECT attempts, first_attempt_at FROM login_attempts WHERE ip_hash = ?'
-        );
-        $stmt->execute([$hash]);
-        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-
-        if (!$row) {
-            $this->pdo->prepare(
-                'INSERT INTO login_attempts (ip_hash, attempts, first_attempt_at, blocked_until) VALUES (?, 1, ?, NULL)'
-            )->execute([$hash, $now]);
-            return;
-        }
-
-        // Okno wygasło — zacznij od nowa
-        if ($now - (int)$row['first_attempt_at'] > self::WINDOW_SECONDS) {
-            $this->pdo->prepare(
-                'UPDATE login_attempts SET attempts = 1, first_attempt_at = ?, blocked_until = NULL WHERE ip_hash = ?'
-            )->execute([$now, $hash]);
-            return;
-        }
-
-        $newAttempts  = (int)$row['attempts'] + 1;
-        $blockedUntil = $newAttempts >= self::MAX_ATTEMPTS ? $now + self::BLOCK_SECONDS : null;
+        $windowStart = $now - self::WINDOW_SECONDS;
 
         $this->pdo->prepare(
-            'UPDATE login_attempts SET attempts = ?, blocked_until = ? WHERE ip_hash = ?'
-        )->execute([$newAttempts, $blockedUntil, $hash]);
+            'INSERT INTO login_attempts (ip_hash, attempts, first_attempt_at, blocked_until)
+             VALUES (?, 1, ?, NULL)
+             ON DUPLICATE KEY UPDATE
+                 attempts = IF(first_attempt_at < ?, 1, attempts + 1),
+                 first_attempt_at = IF(first_attempt_at < ?, ?, first_attempt_at),
+                 blocked_until = IF(first_attempt_at < ?, NULL, blocked_until)'
+        )->execute([$hash, $now, $windowStart, $windowStart, $now, $windowStart]);
+
+        // Ustaw blokadę atomowo, jeśli licznik właśnie osiągnął limit — bez pośredniego odczytu.
+        $this->pdo->prepare(
+            'UPDATE login_attempts SET blocked_until = ? WHERE ip_hash = ? AND attempts >= ? AND blocked_until IS NULL'
+        )->execute([$now + self::BLOCK_SECONDS, $hash, self::MAX_ATTEMPTS]);
     }
 
     /**

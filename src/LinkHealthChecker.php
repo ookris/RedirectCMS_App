@@ -159,7 +159,80 @@ class LinkHealthChecker
     }
 
     /**
-     * Wykonaj request HTTP używając cURL
+     * Sprawdź, czy URL wskazuje na adres publicznie routowalny — blokuje SSRF
+     * do sieci prywatnych/loopback/link-local (w tym metadanych chmury) oraz
+     * schematy inne niż http/https.
+     */
+    private function isPubliclyRoutableUrl(string $url): bool
+    {
+        $parts = parse_url($url);
+        if (!$parts || empty($parts['scheme']) || empty($parts['host'])) {
+            return false;
+        }
+        if (!in_array(strtolower($parts['scheme']), ['http', 'https'], true)) {
+            return false;
+        }
+
+        $host = $parts['host'];
+
+        if (filter_var($host, FILTER_VALIDATE_IP)) {
+            return filter_var($host, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false;
+        }
+
+        $ips = @gethostbynamel($host) ?: [];
+        if (empty($ips)) {
+            $records = @dns_get_record($host, DNS_AAAA) ?: [];
+            $ips = array_column($records, 'ipv6');
+        }
+        if (empty($ips)) {
+            // Nie udało się rozwiązać hosta — traktuj jako niebezpieczny.
+            return false;
+        }
+
+        foreach ($ips as $ip) {
+            if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Rozwiąż wartość nagłówka Location (może być względna) względem bieżącego URL.
+     */
+    private function resolveRedirectUrl(string $base, string $location): ?string
+    {
+        $location = trim($location);
+        if ($location === '') {
+            return null;
+        }
+        if (filter_var($location, FILTER_VALIDATE_URL)) {
+            return $location;
+        }
+
+        $baseParts = parse_url($base);
+        if (!$baseParts || empty($baseParts['scheme']) || empty($baseParts['host'])) {
+            return null;
+        }
+        $origin = $baseParts['scheme'] . '://' . $baseParts['host']
+            . (isset($baseParts['port']) ? ':' . $baseParts['port'] : '');
+
+        if (str_starts_with($location, '/')) {
+            return $origin . $location;
+        }
+
+        $basePath = $baseParts['path'] ?? '/';
+        $dir = rtrim(dirname($basePath), '/');
+        return $origin . $dir . '/' . $location;
+    }
+
+    /**
+     * Wykonaj request HTTP używając cURL. Przekierowania są śledzone ręcznie
+     * (CURLOPT_FOLLOWLOCATION wyłączony), tak aby każdy kolejny adres w łańcuchu
+     * przekierowań również przeszedł walidację isPubliclyRoutableUrl() — bez tego
+     * atakujący mógłby ominąć filtr wstępny przekierowując z zewnętrznego adresu
+     * na wewnętrzny.
      */
     private function httpRequest(string $url, string $method): array
     {
@@ -173,52 +246,79 @@ class LinkHealthChecker
             ];
         }
 
-        $ch = curl_init();
+        $originalUrl = $url;
+        $currentUrl = $url;
+        $redirectCount = 0;
 
-        curl_setopt_array($ch, [
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_MAXREDIRS => $this->maxRedirects,
-            CURLOPT_TIMEOUT => $this->timeout,
-            CURLOPT_CONNECTTIMEOUT => $this->connectTimeout,
-            CURLOPT_SSL_VERIFYPEER => true,
-            CURLOPT_SSL_VERIFYHOST => 2,
-            CURLOPT_USERAGENT => 'RedirectCMS Link Checker/1.0 (+https://github.com/redirectcms)',
-            CURLOPT_NOBODY => ($method === 'HEAD'),
-            CURLOPT_HTTPHEADER => [
-                'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                'Accept-Language: pl,en;q=0.5',
-            ],
-        ]);
+        while (true) {
+            if (!$this->isPubliclyRoutableUrl($currentUrl)) {
+                return [
+                    'success' => false,
+                    'http_status' => null,
+                    'final_url' => null,
+                    'redirect_count' => $redirectCount,
+                    'error' => 'Zablokowany adres docelowy (sieć wewnętrzna lub zarezerwowana)',
+                ];
+            }
 
-        curl_exec($ch);
+            $ch = curl_init();
 
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $finalUrl = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
-        $redirectCount = curl_getinfo($ch, CURLINFO_REDIRECT_COUNT);
-        $error = curl_error($ch);
-        $errno = curl_errno($ch);
+            curl_setopt_array($ch, [
+                CURLOPT_URL => $currentUrl,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_HEADER => true,
+                CURLOPT_FOLLOWLOCATION => false,
+                CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+                CURLOPT_TIMEOUT => $this->timeout,
+                CURLOPT_CONNECTTIMEOUT => $this->connectTimeout,
+                CURLOPT_SSL_VERIFYPEER => true,
+                CURLOPT_SSL_VERIFYHOST => 2,
+                CURLOPT_USERAGENT => 'RedirectCMS Link Checker/1.0 (+https://github.com/redirectcms)',
+                CURLOPT_NOBODY => ($method === 'HEAD'),
+                CURLOPT_HTTPHEADER => [
+                    'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                    'Accept-Language: pl,en;q=0.5',
+                ],
+            ]);
 
-        curl_close($ch);
+            $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+            $error = curl_error($ch);
+            $errno = curl_errno($ch);
+            curl_close($ch);
 
-        if ($errno !== 0) {
+            if ($errno !== 0) {
+                return [
+                    'success' => false,
+                    'http_status' => null,
+                    'final_url' => null,
+                    'redirect_count' => $redirectCount,
+                    'error' => $this->getCurlErrorMessage($errno, $error),
+                ];
+            }
+
+            $isRedirect = in_array($httpCode, [301, 302, 303, 307, 308], true);
+            if ($isRedirect && $redirectCount < $this->maxRedirects) {
+                $headers = is_string($response) ? substr($response, 0, $headerSize) : '';
+                if (preg_match('/^Location:\s*(.+)$/mi', $headers, $m)) {
+                    $nextUrl = $this->resolveRedirectUrl($currentUrl, $m[1]);
+                    if ($nextUrl !== null) {
+                        $currentUrl = $nextUrl;
+                        $redirectCount++;
+                        continue;
+                    }
+                }
+            }
+
             return [
-                'success' => false,
-                'http_status' => null,
-                'final_url' => null,
-                'redirect_count' => 0,
-                'error' => $this->getCurlErrorMessage($errno, $error),
+                'success' => true,
+                'http_status' => $httpCode,
+                'final_url' => $currentUrl !== $originalUrl ? $currentUrl : null,
+                'redirect_count' => $redirectCount,
+                'error' => null,
             ];
         }
-
-        return [
-            'success' => true,
-            'http_status' => $httpCode,
-            'final_url' => $finalUrl !== $url ? $finalUrl : null,
-            'redirect_count' => $redirectCount,
-            'error' => null,
-        ];
     }
 
     /**

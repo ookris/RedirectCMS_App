@@ -139,7 +139,35 @@ class Utils
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             throw new InvalidArgumentException('Nieprawidłowy URL');
         }
+        // FILTER_VALIDATE_URL akceptuje dowolny schemat (np. javascript:), więc
+        // dodatkowo wymagamy http/https — inaczej zapisany adres mógłby wykonać
+        // się jako stored XSS wszędzie tam, gdzie jest renderowany jako <a href>.
+        $scheme = strtolower((string)parse_url($url, PHP_URL_SCHEME));
+        if (!in_array($scheme, ['http', 'https'], true)) {
+            throw new InvalidArgumentException('Dozwolone są tylko adresy zaczynające się od http:// lub https://');
+        }
         return $url;
+    }
+
+    /**
+     * Sprawdza, czy zapisany wcześniej URL jest bezpieczny do wyrenderowania jako <a href>
+     * (obrona w głąb dla danych zapisanych zanim sanitizeUrl() zaczął odrzucać schemat).
+     */
+    public static function isSafeHttpUrl(?string $url): bool
+    {
+        if (!$url) return false;
+        $scheme = strtolower((string)parse_url($url, PHP_URL_SCHEME));
+        return in_array($scheme, ['http', 'https'], true);
+    }
+
+    /**
+     * Neutralizuje wartość przed zapisem do CSV, aby arkusz kalkulacyjny (Excel/Sheets)
+     * nie potraktował jej jako formuły (CSV/formula injection przez =, +, -, @).
+     */
+    public static function csvSafe(mixed $value): string
+    {
+        $value = (string)$value;
+        return preg_match('/^\s*[=+\-@\t\r]/', $value) ? "'" . $value : $value;
     }
 
     public static function sanitizeSlug(string $slug, int $maxLength = 190): string

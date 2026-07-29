@@ -107,18 +107,26 @@ class TagRepository
      */
     public function setTagsForLink(int $linkId, array $tagIds): void
     {
-        // Usuń stare powiązania
-        $stmt = $this->pdo->prepare('DELETE FROM link_tags WHERE link_id = :lid');
-        $stmt->execute([':lid' => $linkId]);
+        $this->pdo->beginTransaction();
+        try {
+            // Usuń stare powiązania
+            $stmt = $this->pdo->prepare('DELETE FROM link_tags WHERE link_id = :lid');
+            $stmt->execute([':lid' => $linkId]);
 
-        // Dodaj nowe
-        if (empty($tagIds)) {
-            return;
-        }
+            // Dodaj nowe
+            if (!empty($tagIds)) {
+                $stmt = $this->pdo->prepare('INSERT INTO link_tags(link_id, tag_id) VALUES(:lid, :tid)');
+                foreach ($tagIds as $tagId) {
+                    $stmt->execute([':lid' => $linkId, ':tid' => (int)$tagId]);
+                }
+            }
 
-        $stmt = $this->pdo->prepare('INSERT INTO link_tags(link_id, tag_id) VALUES(:lid, :tid)');
-        foreach ($tagIds as $tagId) {
-            $stmt->execute([':lid' => $linkId, ':tid' => (int)$tagId]);
+            $this->pdo->commit();
+        } catch (\Throwable $e) {
+            if ($this->pdo->inTransaction()) {
+                $this->pdo->rollBack();
+            }
+            throw $e;
         }
     }
 
@@ -127,6 +135,14 @@ class TagRepository
      */
     public function findOrCreate(string $name): int
     {
+        // Usuń znaczniki HTML i ogranicz długość — nazwa tagu może pochodzić
+        // z niezaufanego źródła (import CSV), a jest renderowana w panelu admina.
+        $name = trim(strip_tags($name));
+        $name = mb_substr($name, 0, 100);
+        if ($name === '') {
+            $name = 'tag';
+        }
+
         $slug = Utils::sanitizeSlug($name);
         
         // Sprawdź czy tag istnieje

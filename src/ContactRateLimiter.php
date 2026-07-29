@@ -61,31 +61,16 @@ class ContactRateLimiter
     {
         $hash = $this->hash($ip);
         $now  = time();
+        $windowStart = $now - self::WINDOW_SECONDS;
 
-        $stmt = $this->pdo->prepare(
-            'SELECT attempts, first_attempt_at FROM login_attempts WHERE ip_hash = ?'
-        );
-        $stmt->execute([$hash]);
-        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
-
-        if (!$row) {
-            $this->pdo->prepare(
-                'INSERT INTO login_attempts (ip_hash, attempts, first_attempt_at, blocked_until) VALUES (?, 1, ?, NULL)'
-            )->execute([$hash, $now]);
-            return;
-        }
-
-        // Okno wygasło — zacznij od nowa
-        if ($now - (int)$row['first_attempt_at'] > self::WINDOW_SECONDS) {
-            $this->pdo->prepare(
-                'UPDATE login_attempts SET attempts = 1, first_attempt_at = ?, blocked_until = NULL WHERE ip_hash = ?'
-            )->execute([$now, $hash]);
-            return;
-        }
-
+        // Atomowy upsert — patrz komentarz w LoginRateLimiter::record() o powodzie.
         $this->pdo->prepare(
-            'UPDATE login_attempts SET attempts = attempts + 1 WHERE ip_hash = ?'
-        )->execute([$hash]);
+            'INSERT INTO login_attempts (ip_hash, attempts, first_attempt_at, blocked_until)
+             VALUES (?, 1, ?, NULL)
+             ON DUPLICATE KEY UPDATE
+                 attempts = IF(first_attempt_at < ?, 1, attempts + 1),
+                 first_attempt_at = IF(first_attempt_at < ?, ?, first_attempt_at)'
+        )->execute([$hash, $now, $windowStart, $windowStart, $now]);
     }
 
     /**
